@@ -6,6 +6,8 @@ $contrasenya2=$_POST['contrasenya'];
 
 require 'connection.php';
 session_start();
+
+
 /* $servidor="localhost";
 $usuario="root";
 $password="usbw";
@@ -25,8 +27,8 @@ if(!$con){
     mysqli_set_charset($con,"utf8");
 } */
 
-echo $usr ;
-echo $contrasenya2;
+/* echo $usr ;
+echo $contrasenya2; */
 
 $sql2 = "SELECT COUNT(*) as contar from usuario where nombre='$usr' and contrasenya='$contrasenya2'";
 /* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
@@ -60,12 +62,16 @@ if($array ['contar']>0 ){
 
 </body>';
 }else{
-   echo "<!DOCTYPE html >
-<html class='pruebaphp'>
+ 
+   echo '<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>PHP</title>
-    <link rel='stylesheet' href='/styles/styles.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -73,12 +79,12 @@ if($array ['contar']>0 ){
 
 
     <div class=miau>
-        <div class='tituloLogin'>Login</div>
+        <div class="tituloLogin">Login</div>
 
-        <div class='mal' id='mal'>Los datos son incorrectos
-            <div class='imagenWrong' id='imagenWrong'></div>
+        <div class="mal" id="mal">Los datos son incorrectos
+            <div class="imagenWrong" id="imagenWrong"></div>
 
-            <button onclick='window.location.href=`/prueba.php`' id='volver' class='volver'>Volver</button>
+            <button onclick="window.location.href=`/prueba.php`" id="volver" class="volver">Volver</button>
 
         </div>
 
@@ -89,7 +95,7 @@ if($array ['contar']>0 ){
 
 </body>
 
-</html> ";
+</html>';
 }
 ?>
 
