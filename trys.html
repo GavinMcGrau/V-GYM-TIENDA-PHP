@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
-    <div id="barra" class="barra">
-        <div id="nombre" class="nombre">MASDASDSDAS</div>
-
-    </div>
-    <div id="lateral" class="lateral"></div>
-    <div id="contenido" class="contenido">
-
-        <div id="bienvenida" class="bienvenida">Bienvenido knsadkndsnkdsa!</div>
-    </div>
-
-
-</body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    
+    <body>
+        <div id="barra" class="barra">
+            <div id="nombre" class="nombre">'.$usr.'</div>
+    
+        </div>
+        <div id="lateral" class="lateral">
+            <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
+            <div id="cambioImagen" class="cambioImagen"  onclick="window.location='imagenesPerfil.php'"></div>
+            </div>
+        </div>
+        <div id="contenido" class="contenido">
+    
+            <div id="bienvenida" class="bienvenida">Bienvenido '.$usr.'!</div>
+        </div>
+    
+    
+    </body>'
 
 </html>

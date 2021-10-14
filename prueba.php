@@ -1,9 +1,7 @@
-<?php
-
-echo "<!DOCTYPE html >
+<!DOCTYPE html >
 <html class='pruebaphp'>
 <head>
-<title>PHP</title>
+<title>Login</title>
 <link rel='stylesheet' href='styles/styles.css'>
 </head>
 <body >
@@ -11,7 +9,7 @@ echo "<!DOCTYPE html >
 
 
 <div class=miau>
-<div class='tituloLogin'>Login</div>
+<div class='tituloLogin'></div>
 
  <form method='post'  class='login' id='login' action='./login.php'>
 
@@ -32,7 +30,4 @@ echo "<!DOCTYPE html >
     <div class='mal' id='mal' style='width: 500px;height: 500px; background-color: black;position: absolute;margin-bottom: 20%;opacity: 0;'></div>
 
 </body>
-</html> ";
-
-
-?>
+</html>

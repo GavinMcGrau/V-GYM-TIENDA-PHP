@@ -1,14 +1,17 @@
 <?php
+include "connection.php";
+session_start();
 
 $usr=$_POST['usr'];
 $contrasenya2=$_POST['contrasenya'];
-
-
+$_SESSION['usr']=$usr;
+$_SESSION['contrasenya']=$contrasenya2;
+/*
 require 'connection.php';
 session_start();
 
 
-/* $servidor="localhost";
+ $servidor="localhost";
 $usuario="root";
 $password="usbw";
 $bd="usuarios";
@@ -48,16 +51,21 @@ if($array ['contar']>0 ){
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
+
 <body>
-    <div id="barra" class="barra">
-        <div id="nombre" class="nombre">'.$usr.'</div>
+<div id="barra" class="barra">
+    <div id="nombre" class="nombre">'.$usr.'</div>
 
+</div>
+<div id="lateral" class="lateral">
+    <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
+    <div id="cambioImagen" class="cambioImagen"  onclick="window.location=`imagenesPerfil.php`"></div>
     </div>
-    <div id="lateral" class="lateral"></div>
-    <div id="contenido" class="contenido">
+</div>
+<div id="contenido" class="contenido">
 
-        <div id="bienvenida" class="bienvenida">Bienvenido '.$usr.'!</div>
-    </div>
+    <div id="bienvenida" class="bienvenida">Bienvenido '.$usr.'!</div>
+</div>
 
 
 </body>';
@@ -74,7 +82,8 @@ if($array ['contar']>0 ){
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body class="bodyLogin" id="bodyLogin" style:"background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));height: 40vh;
+width: 350px;">
 
 
 
@@ -97,6 +106,8 @@ if($array ['contar']>0 ){
 
 </html>';
 }
+
+
 ?>
 
 
