@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <!DOCTYPE html>
     <html lang="en">
     
@@ -12,22 +11,26 @@
         <link rel="stylesheet" href="styles/styles.css">
     </head>
     
+    
     <body>
-        <div id="barra" class="barra">
-            <div id="nombre" class="nombre">'.$usr.'</div>
-    
-        </div>
-        <div id="lateral" class="lateral">
-            <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
-            <div id="cambioImagen" class="cambioImagen"  onclick="window.location='imagenesPerfil.php'"></div>
+    <div id="barra" class="barra">
+        <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
+            <div id="cambioImagen" class="cambioImagen"  onclick="window.location=`imagenesPerfil.php`"></div>
             </div>
-        </div>
-        <div id="contenido" class="contenido">
+        <div id="nombre" class="nombre">Usuario <?php echo $usr;?></div>
     
-            <div id="bienvenida" class="bienvenida">Bienvenido '.$usr.'!</div>
-        </div>
+    </div>
+    <div id="lateral" class="lateral">
+       
+    </div>
+    <div id="contenido" class="contenido">
+    
+        <div id="bienvenida" class="bienvenida">Bienvenido <?php echo $usr;?></div>
+    
+        <div class="productos" id="productos"></div>
+    </div>
     
     
-    </body>'
+    </body>
 
 </html>
