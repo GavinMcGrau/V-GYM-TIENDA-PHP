@@ -7,14 +7,13 @@
 <body >
 
 
-
 <div class=miau>
 <div class='tituloLogin'></div>
 
 
 
  <form method='post'  class='login' id='login' action='./login.php'>
- <div class="enlaceRegister" id="enlaceRegister"></div>
+ <div class="enlaceRegister" id="enlaceRegister">Log In</div>
 
 <input name='usr' class='usr inputs' placeholder='usr' type='text' tabindex='1' required autofocus>
 
