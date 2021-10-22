@@ -1,6 +1,9 @@
 <?php
 
 include "connection.php";
+$usr=$_POST['usr'];
+$contrasenya=$_POST['contrasenya1'];
+$correo=$_POST['correo'];
 session_start();
 
 
@@ -17,10 +20,10 @@ $consulta=mysqli_query($con,$sql);
 
 if(!$consulta){
     die(" Error en el insert");
-
+ 
 }else{
 	
-header('Location: index.html');
+    header('Location: index.html');
 }
 
 

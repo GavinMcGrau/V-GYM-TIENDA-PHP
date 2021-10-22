@@ -15,7 +15,7 @@ echo "<!DOCTYPE html >
 
  <form method='post'  class='login' id='login' action='./datos.php'>
 
-
+ <div class='enlaceRegister' id='enlaceRegister' ><a class='loginDirect' id='loginDirect' href='/prueba.php'>Log In</a></div>
 <input name='usr' class='usr inputs' placeholder='usuario' type='text' tabindex='1' required autofocus>    
  
  <input name='correo' class='correo inputs' placeholder='correo' type='mail' tabindex='1' required autofocus>
