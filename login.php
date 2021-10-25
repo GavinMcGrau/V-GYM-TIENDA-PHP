@@ -30,19 +30,23 @@ if($array ['contar']>0 ){?>
 
 
 <body>
-    <div id="barra" class="barra">
+    <div id="barra" class="barra" >
         <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
             <div id="cambioImagen" class="cambioImagen"  onclick="window.location=`imagenesPerfil.php`"></div>
             </div>
-        <div id="nombre" class="nombre">Usuario <?php echo $usr;?></div>
+        <div id="nombre" class="nombre">Bienvenido <?php echo $usr;?></div>
     
     </div>
     <div id="lateral" class="lateral">
-       
+       <div class="anyadirActividad"<?php $sql3 = "SELECT actividades as contar from usuario where nombre='$usr' and contrasenya='$contrasenya2'";  if(contar>0){ ?>
+         style="background-image: url(/images/perfil/random.jpg)>";
+         
+        
+           </div>
     </div>
     <div id="contenido" class="contenido">
     
-        <div id="bienvenida" class="bienvenida">Bienvenido <?php echo $usr;?></div>
+        <div id="bienvenida" class="bienvenida">Estos son tus objetivos <?php echo $usr;?></div>
     
         <div class="productos" id="productos"></div>
     </div>
@@ -54,7 +58,7 @@ if($array ['contar']>0 ){?>
 }else{?>
  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bodyLogin" id="bodyLogin">
 
 <head>
     <meta charset="UTF-8">
@@ -64,13 +68,15 @@ if($array ['contar']>0 ){?>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="bodyLogin" id="bodyLogin" style: background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));height: 40vh;
-width: 350px;>
+<body >
 
 
-
+<video autoplay muted loop id="backVideo">
+    
+            <source src="/src/videoplayback (1) (1).mp4 " type="video/mp4">
+  </video>
     <div class=miau>
-        <div class="tituloLogin">Login</div>
+    
 
         <div class="mal" id="mal">Los datos son incorrectos
             <div class="imagenWrong" id="imagenWrong"></div>
