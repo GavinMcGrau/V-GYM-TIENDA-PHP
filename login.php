@@ -38,17 +38,107 @@ if($array ['contar']>0 ){?>
     
     </div>
     <div id="lateral" class="lateral">
-       <div class="anyadirActividad"<?php $sql3 = "SELECT actividades as contar from usuario where nombre='$usr' and contrasenya='$contrasenya2'";  if(contar>0){ ?>
-         style="background-image: url(/images/perfil/random.jpg)>";
-         
-        
-           </div>
+       <div class="anyadirActividad">
+ </div>
     </div>
+
+
+
+    
     <div id="contenido" class="contenido">
     
         <div id="bienvenida" class="bienvenida">Estos son tus objetivos <?php echo $usr;?></div>
     
-        <div class="productos" id="productos"></div>
+        <div class="productos" id="productos">
+        <div class="Lunes wrapper">
+        <div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="Martes wrapper">
+
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="Miercoles wrapper">
+
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="jueves wrapper">
+
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="viernes wrapper">
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="Sabado wrapper">
+
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+<br>
+<div class="domingo wrapper">
+
+<div class="one wrapperSon">One</div>
+    <div class="two wrapperSon">Two</div>
+    <div class="three wrapperSon">Three</div>
+    <div class="four wrapperSon">Four</div>
+    <div class="five wrapperSon">Five</div>
+    <div class="six wrapperSon">six</div>
+    <div class="seven wrapperSon">Seven</div>
+    <div class="eigth wrapperSon">eigth</div>
+    <div class="nine wrapperSon">Nine</div>
+</div>
+        </div>
     </div>
     
     

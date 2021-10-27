@@ -1,8 +1,33 @@
 
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+    background-color: aqua;
+   
+/*    border-width: 1%; */
+   border-color: yellow;
+border-style: solid;
+
+  }
+
+.wrapperSon{
+    border-color: rgb(9, 255, 0);
+border-style: solid;
+
+background-image: url(/images/1492790881-6add_84227.png);
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+}
+
+
 .productos{
-    margin-top: 2%;
-    height: 80%;
-    width: 80%;
+    margin-top: 1%;
+    margin-left: -2%;
+    height: 95%;
+    width:95%;
     background-color: brown;
 }
 
@@ -36,8 +61,8 @@
     opacity: 0.3;
   }
   .loginPage {
-    width: 10vw;
-    height: 8vh;
+    width: fit-content;
+    height: 10%;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 25%;
     margin-top: 30%;
@@ -66,8 +91,8 @@
 }
 
 .crearPage {
-    width: 12vw;
-    height: 8vh;
+    width: fit-content;
+    height: 10%;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 60%;
     margin-top: 30%;
@@ -328,6 +353,7 @@ input:focus {
     height: 2vh;
     width: 55vw;
     font-size: 190%;
+    margin-top: -2%;
 }
 
 .enlaceRegister{
