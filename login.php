@@ -3,17 +3,32 @@
 include "connection.php";
 session_start();
 
-$usr=$_POST['usr'];
+$correo=$_POST['correo'];
 $contrasenya2=$_POST['contrasenya'];
+
+/* $usr=$_POST['usr']
+ */
+
+
 /* $_SESSION['usr']=$_POST['usr'];
 $_SESSION['contrasenya2']=$_POST['contrasenya']; */
 
 
-$sql2 = "SELECT COUNT(*) as contar from usuario where nombre='$usr' and contrasenya='$contrasenya2'";
-/* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
-
+$sql2 = "SELECT COUNT(*) as contar from usuario where correo='$correo' and contrasenya='$contrasenya2'";
 $consultas=mysqli_query($con,$sql2);
 $array = mysqli_fetch_array($consultas);
+/* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
+
+$sql3 = "SELECT nombre as nombreUsuario from usuario where correo='$correo'";
+$consultasUser=mysqli_query($con,$sql3);
+$knowUser = mysqli_fetch_array($consultasUser);
+$nombreUsuario = $knowUser['nombreUsuario'];
+
+$sql4 = "SELECT imagen as imagens from usuario where correo='$correo'";
+$consultasFoto=mysqli_query($con,$sql4);
+$knowFoto = mysqli_fetch_array($consultasFoto);
+$fotoUsuario = $knowFoto['imagens'];
+
 
 
 if($array ['contar']>0 ){?>
@@ -27,7 +42,7 @@ if($array ['contar']>0 ){?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/styles.scss">
+       <!--  <link rel="stylesheet" href="styles/styles.scss"> -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
@@ -39,14 +54,30 @@ if($array ['contar']>0 ){?>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-  <div id="imagenPerfil" class="imagenPerfil" style="background-image: url(/images/perfil/random.jpg);"> 
-            <div id="cambioImagen" class="cambioImagen"  onclick="window.location=`imagenesPerfil.php`"></div>
-            </div>
-        <div id="nombre" class="nombre">Bienvenido <?php echo $usr;?></div>
-</nav>
- 
+
+
+    
+
+
+
+    
+<div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 250px;"> <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="32"> </svg> <span class="fs-4">BBBootstrap</span> </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span class="ms-2">Home</span> </a> </li>
+        <li> <a href="#" class="nav-link text-white"> <i class="fa fa-dashboard"></i><span class="ms-2">Dashboard</span> </a> </li>
+        <li> <a href="#" class="nav-link text-white"> <i class="fa fa-first-order"></i><span class="ms-2">My Orders</span> </a> </li>
+        <li> <a href="#" class="nav-link text-white"> <i class="fa fa-cog"></i><span class="ms-2">Settings</span> </a> </li>
+        <li> <a href="#" class="nav-link text-white"> <i class="fa fa-bookmark"></i><span class="ms-2">Bookmarks</span> </a> </li>
+    </ul>
+        <h3 class="d-flex align-items-center text-white text-decoration-none " aria-expanded="false"> <?php echo $nombreUsuario; ?></h3>
+
+    <hr>
+
+    <div class="dropdown">  <img src="<?php echo $fotoUsuario; ?>" alt="" width="200" height="200" class="rounded-circle me-2">  </a>
+              </ul>
+    </div>
+</div>
 
 
 
@@ -69,10 +100,12 @@ if($array ['contar']>0 ){?>
           <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
       </div>
         </a>
-      </div>
-      <div class="card">
+          </div>
+
+<!--  -->
+           <div class="card">
         <a href="#">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1472076638602-b1f8b1ac0b4a?ixlib=rb-0.3.5&s=63c9de7246b535be56c8eaff9b87dd89&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+        <img class="card-img-top" src="<?php echo $fotoUsuario; ?>"  alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque!</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio iusto maxime nemo omnis praesentium similique.</p>
@@ -80,6 +113,12 @@ if($array ['contar']>0 ){?>
         </div>
         </a>
       </div>
+
+
+
+        <!-- 
+    
+     
       <div class="card">
         <a href="#">
         <img class="card-img-top" src="https://images.unsplash.com/photo-1535086181678-5a5c4d23aa7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=34c86263bec2c8f74ceb74e9f4c5a5fc&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
@@ -119,7 +158,7 @@ if($array ['contar']>0 ){?>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
           <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
-        </a>
+        </a> -->
       </div>
     </div>
   </div>

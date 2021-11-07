@@ -3,7 +3,7 @@
 $servidor="localhost";
 $usuario="root";
 $password="usbw";
-$bd="usuarios";
+$bd="gym";
 
 /* $servidor="localhost/marcgae556.mysql.db:3306";
 $usuario="marcgae556";

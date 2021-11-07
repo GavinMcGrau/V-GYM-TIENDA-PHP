@@ -17,7 +17,7 @@
  <form method='post'  class='login' id='login' action='./login.php'>
  <div class="enlaceRegister" id="enlaceRegister" ><a class="loginDirect" id="loginDirect" href="/crearUsuario.php">Sing In</a></div>
 
-<input name='usr' class='usr inputs' placeholder='usuario' type='text' tabindex='1' required autofocus>
+<input name='correo' class='usr inputs' placeholder='Correo' type='email' tabindex='1' required autofocus>
 
 
 <input name='contrasenya' class='contrasenya inputs' placeholder='contrasenya' type='password' tabindex='1' required autofocus>

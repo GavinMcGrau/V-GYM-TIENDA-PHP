@@ -1,47 +1,18 @@
-/* 
-Cartas actividades
-*/
+.nav-link:hover {
+    background-color: #525252 !important
+}
 
+.nav-link .fa {
+    transition: all 1s
+}
 
-/* .productos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 80vh;
-    width: 99%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
+.nav-link:hover .fa {
+    transform: rotate(360deg)
+}
+
+.container {
     position: absolute;
-    top: 10%;
-} */
-
-
-/* .wrapper {
-    width: 13.5vw;
-    height: 5rem;
-    flex: 0 1 500px;
-    background-color: white;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: bold;
 }
-
-.wrapperSon {
-    border-color: rgb(9, 255, 0);
-    border-style: solid;
-    height: 5.5em;
-}
-
-.anyadir {
-    width: 1em;
-    height: 1em;
-    background-image: url(/images/1492790881-6add_84227.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom, left;
-} */
 
 .pruebaphp {
     background: linear-gradient(#5b22aac7, #1492b1c7);
@@ -316,14 +287,18 @@ input:focus {
 /* ////////////////////////////////// */
 
 .barra {
-    height: 10vh;
-    width: 101vw;
+    height: 5vh;
     background-color: rgb(59, 175, 221);
-    margin-left: -1%;
-    margin-top: -2%;
     position: absolute;
     z-index: 5;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nombre {
+    color: aliceblue !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lateral {
@@ -342,16 +317,6 @@ input:focus {
     height: 90vh;
     width: 80vw;
     position: absolute;
-}
-
-.nombre {
-    height: 2vh;
-    width: 20vw;
-    margin-top: 2.5%;
-    margin-left: 50%;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 170%;
 }
 
 .bienvenida {
