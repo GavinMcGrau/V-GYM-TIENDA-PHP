@@ -1,11 +1,47 @@
+/* 
+Cartas actividades
+*/
 
-.productos{
-    margin-top: 2%;
-    height: 80%;
-    width: 80%;
-    background-color: brown;
+
+/* .productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: absolute;
+    top: 10%;
+} */
+
+
+/* .wrapper {
+    width: 13.5vw;
+    height: 5rem;
+    flex: 0 1 500px;
+    background-color: white;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
 }
 
+.wrapperSon {
+    border-color: rgb(9, 255, 0);
+    border-style: solid;
+    height: 5.5em;
+}
+
+.anyadir {
+    width: 1em;
+    height: 1em;
+    background-image: url(/images/1492790881-6add_84227.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom, left;
+} */
 
 .pruebaphp {
     background: linear-gradient(#5b22aac7, #1492b1c7);
@@ -14,7 +50,12 @@
     height: 100%;
 }
 
-
+.crearUsuariophp {
+    background: linear-gradient(#5b22aac7, #1492b1c7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
 
 #backVideo {
     object-fit: inherit;
@@ -28,28 +69,27 @@
     left: 0;
     background: rgb(0, 0, 0);
     opacity: 0.3;
-  }
-  .loginPage {
-    width: 10vw;
-    height: 8vh;
+}
+
+.loginPage {
+    width: fit-content;
+    height: 10%;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 25%;
     margin-top: 30%;
     position: absolute;
     padding: 0%;
-    
     font-size: 300%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    
     border-radius: 5%;
     border-style: solid;
     border-color: aqua;
 }
 
-.loginPageText{
+.loginPageText {
     color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -60,8 +100,8 @@
 }
 
 .crearPage {
-    width: 12vw;
-    height: 8vh;
+    width: fit-content;
+    height: 10%;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 60%;
     margin-top: 30%;
@@ -75,9 +115,10 @@
     border-radius: 5%;
     border-style: solid;
     border-color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.crearPageText{
+.crearPageText {
     color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -100,20 +141,22 @@
     margin-top: 20%;
     border-radius: 20%;
     left: 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.imagenPerfil{
-height: 7vh;
-width: 7vh;
-background-size: cover;
-background-position: center;
-border-radius: 50%;
-margin-left: 3%;
-vertical-align: middle;
-margin-top: 1.5%;
-position:absolute;
+.imagenPerfil {
+    height: 7vh;
+    width: 7vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-left: 3%;
+    vertical-align: middle;
+    margin-top: 1.5%;
+    position: absolute;
 }
-.cambioImagen{
+
+.cambioImagen {
     height: 2vh;
     width: 2vh;
     background-image: url(/images/perfil/edit.png);
@@ -121,6 +164,13 @@ position:absolute;
     background-size: cover;
     margin-left: 10%;
     position: absolute;
+}
+
+.bodyLogin {
+    background: linear-gradient(#5b22aac7, #1492b1c7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .mal {
@@ -140,9 +190,8 @@ position:absolute;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: xx-large;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
-
 
 .imagenWrong {
     background-image: url(/images/malLoggin.png);
@@ -159,17 +208,37 @@ position:absolute;
     height: 10%;
     color: ivory;
     background-color: transparent;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.nombreFit {
+    color: darkorange;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    margin-left: 33%;
+    top: 20%;
+    font-size: 600%;
+    position: absolute;
+    font-weight: 900;
 }
 
 .tituloLogin {
-    width: 100%;
-    margin-top: -15%;
-    color: aliceblue;
+    width: 12vw;
+    height: 8vh;
+    background-color: rgba(73, 73, 73, 0.253);
+    margin-left: 43.5%;
+    margin-top: -10%;
     position: absolute;
+    padding: 0%;
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: aqua;
+    color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 600%;
-    text-align: center;
 }
 
 .formularioCrear {
@@ -179,6 +248,7 @@ position:absolute;
     left: 50%;
     border: none;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .inputs {
@@ -187,6 +257,7 @@ position:absolute;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 input {
@@ -208,10 +279,11 @@ input:focus {
     color: white;
 }
 
-::placeholder {
+
+/* ::placeholder {
     align-text: center;
     color: rgba(255, 255, 255, 0.42);
-}
+} */
 
 .enviarLogin {
     background-color: transparent;
@@ -228,6 +300,7 @@ input:focus {
     cursor: pointer;
     animation: bloomButton infinite 2s ease-in-out;
     animation-direction: alternate-reverse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @keyframes bloomButton {
@@ -250,7 +323,7 @@ input:focus {
     margin-top: -2%;
     position: absolute;
     z-index: 5;
-    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .lateral {
@@ -260,6 +333,7 @@ input:focus {
     background-color: rgba(71, 135, 255, 0.315);
     position: absolute;
     z-index: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .contenido {
@@ -274,7 +348,7 @@ input:focus {
     height: 2vh;
     width: 20vw;
     margin-top: 2.5%;
-    margin-left: -1%;
+    margin-left: 50%;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 170%;
@@ -285,10 +359,10 @@ input:focus {
     height: 2vh;
     width: 55vw;
     font-size: 190%;
+    text-align: center;
 }
 
-.enlaceRegister{
-
+.enlaceRegister {
     background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));
     height: 5vh;
     width: 13vh;
@@ -297,16 +371,19 @@ input:focus {
     border-radius: 5%;
     color: beige;
     text-align: center;
-    
-}
-.enlaceRegister:hover{
-    box-shadow: 2px 2px  aqua;
-
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.loginDirect{
+.enlaceRegister:hover {
+    box-shadow: 2px 2px aqua;
+}
+
+.loginDirect {
     color: beige;
     text-decoration: none;
     font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
 /* ///////////////////////// */

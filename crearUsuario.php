@@ -1,7 +1,7 @@
 <?php
 
 echo "<!DOCTYPE html >
-<html class='pruebaphp'>
+<html class='crearUsuariophp'>
 <head>
 <title>PHP</title>
 <link rel='stylesheet' href='styles/styles.css'>
@@ -11,8 +11,10 @@ echo "<!DOCTYPE html >
 
 
 <div class=miau>
-<div class='tituloLogin'>Crear Usuario</div>
-
+<div class='tituloLogin'>Sing Up</div>
+<video autoplay muted loop id='backVideo'>
+    <source src='/src/videoplayback (1) (1).mp4 ' type='video/mp4'>
+  </video>
  <form method='post'  class='login' id='login' action='./datos.php'>
 
  <div class='enlaceRegister' id='enlaceRegister' ><a class='loginDirect' id='loginDirect' href='/prueba.php'>Log In</a></div>
