@@ -2,9 +2,12 @@
 <?php
 include "connection.php";
 session_start();
+setlocale(LC_ALL,"spanish");
 
 $correo=$_POST['correo'];
 $contrasenya2=$_POST['contrasenya'];
+
+
 
 /* $usr=$_POST['usr']
  */
@@ -49,10 +52,8 @@ if($array ['contar']>0 ){?>
 </head>
 
 
-<body>
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<body class="bodyUserPage">
+   
 
 
 
@@ -61,7 +62,7 @@ if($array ['contar']>0 ){?>
 
 
     
-<div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 250px;"> <a href="/" class="d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="32"> </svg> <h2 class="fs-4">BreakEnds</h2> </a>
+<div class=" d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark position-fixed" style="width: 250px;"> <a href="/" class="d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="100"> </svg> <h2 class="fs-4 ">BreakEnds</h2> </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span class="ms-2">Home</span> </a> </li>
@@ -74,7 +75,7 @@ if($array ['contar']>0 ){?>
 
     <hr>
 
-    <div class="dropdown">  <img src="<?php echo $fotoUsuario; ?>" alt="" class="rounded-circle  fotoUser" >  
+    <div  class=" text-center img-fluid" >  <img src="<?php echo $fotoUsuario; ?>" alt="" width="160" height="150" class="rounded-circle  fotoUser" >  
     </div>
 </div>
 
@@ -82,21 +83,30 @@ if($array ['contar']>0 ){?>
 
     
     
-<div class="container">
-  <div class="text-center">
-    <h1>Bootstrap card tiled layout</h1>
+<div class="container contenedorCentral">
+  <div class="w dia">
+    <h1><?php echo ucwords(strftime("%A"));  ?></h1>
   </div>
-  <div class="container">
+  <div class="container contenedorActividades">
     <div class="card-columns">
       <div class="card">
+        
         <a href="#">
-        <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+          <?php 
+          $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo'";
+          $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
+          $knowActividad = mysqli_fetch_array($consultaImagenActividad);
+          $imagenActividad = $knowActividad["imagenActividad"];
+          $claseActividad = $knowActividad["claseActividad"];
+          $subClaseActividad = $knowActividad["subclaseActividad"];
+          $nombreActividad =$knowActividad["nombreActividad"];
+                   ?> 
+
+        <img class="card-img-top" src= "<?php echo $imagenActividad?>" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad alias, aliquid amet aspernatur atque culpa cum debitis dicta doloremque, dolorum ea eos et excepturi explicabo facilis harum illo impedit incidunt laborum laudantium...
-          </p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
+         
+          <h5 class="card-title"><?php echo ucwords($nombreActividad) ?></h5>
+          <p class="card-text"><?php echo  $claseActividad ?> - <?php echo $subClaseActividad?> </p>
       </div>
         </a>
           </div>
@@ -108,14 +118,13 @@ if($array ['contar']>0 ){?>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque!</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio iusto maxime nemo omnis praesentium similique.</p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
         </a>
       </div>
 
 
 
-        <!-- 
+        
     
      
       <div class="card">
@@ -124,7 +133,6 @@ if($array ['contar']>0 ){?>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur.</h5>
           <p class="card-text">Amet commodi deleniti enim laboriosam odio placeat praesentium quis ratione rerum suscipit.</p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
         </a>
       </div>
@@ -134,7 +142,6 @@ if($array ['contar']>0 ){?>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur.</h5>
           <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
         </a>
       </div>
@@ -145,7 +152,6 @@ if($array ['contar']>0 ){?>
           <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, consequatur culpa cumque deserunt dignissimos error explicabo fugiat harum ipsam magni minus mollitia nemo perferendis qui repellendus rerum saepe vel voluptate voluptatem voluptatum!
             Aperiam, labore, molestiae!..</p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
         </a>
       </div>
@@ -155,14 +161,26 @@ if($array ['contar']>0 ){?>
         <div class="card-body">
           <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
         </div>
-        </a> -->
+        </a>
       </div>
+
+  <div class="card">
+        <a href="#">
+        <img class="card-img-top" src="https://fundacionmasqueideas.org/wp-content/uploads/2014/03/logo-cruz-portada-fundacionMQI.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">AÑADIR ACTIVIDAD.</h5>
+        </div>
+        </a>
+      </div>
+
     </div>
   </div>
 </div>
  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
 
 <?php

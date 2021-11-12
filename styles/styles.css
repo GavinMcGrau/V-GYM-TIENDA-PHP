@@ -10,13 +10,29 @@
     transform: rotate(360deg)
 }
 
+.barraUser {
+    position: fixed;
+}
+
+.dia {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 25%;
+}
+
 .container {
     position: absolute;
+    left: 10%;
+    top: 15%;
+}
+
+.contenedorActividades {
+    position: absolute;
+    left: 15%;
+    top: 150%;
+    overflow-x: scroll;
 }
 
 .fotoUser {
-    width: 150px;
-    height: 120px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat !important;
@@ -151,6 +167,8 @@
     background-repeat: no-repeat;
     height: 100%;
 }
+
+.bodyUserPage {}
 
 .mal {
     height: 40vh;
