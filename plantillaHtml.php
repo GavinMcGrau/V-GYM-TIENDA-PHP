@@ -1,8 +1,8 @@
 <?php 
+include "connection.php";
 
 $correo=$_SESSION['correo'];
 $contrasenya= $_SESSION['contrasenya'];
-include "connection.php";
 
 
 /* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
@@ -55,19 +55,19 @@ $fotoUsuario = $knowFoto['imagens'];
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="login.php" class="nav-link active" aria-current="page"> <i class="fa fa-home"></i><span class="ms-2">Inicio</span> </a>
+                <a href="paginaUsuario.php" class="nav-link active" aria-current="page"> <span class="ms-2">Inicio</span> </a>
             </li>
             <li>
-                <a href="masActividades.php" class="nav-link text-white"> <i class="fa fa-dashboard"></i><span class="ms-2">Ejercicios</span> </a>
+                <a href="masActividades.php" class="nav-link text-white"> <span class="ms-2">Ejercicios</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <i class="fa fa-first-order"></i><span class="ms-2">My Orders</span> </a>
+                <a href="#" class="nav-link text-white"> <span class="ms-2">My Orders</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <i class="fa fa-cog"></i><span class="ms-2">Settings</span> </a>
+                <a href="#" class="nav-link text-white"> <span class="ms-2">Settings</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <i class="fa fa-bookmark"></i><span class="ms-2">Bookmarks</span> </a>
+                <a href="#" class="nav-link text-white"> <span class="ms-2">Bookmarks</span> </a>
             </li>
         </ul>
         <h3 class="d-flex align-items-center text-white text-decoration-none nombre" aria-expanded="false">
@@ -79,3 +79,15 @@ $fotoUsuario = $knowFoto['imagens'];
         <div class=" text-center img-fluid"> <img src="<?php echo $fotoUsuario; ?>" alt="" width="160" height="150" class="rounded-circle  fotoUser">
         </div>
     </div>
+
+
+
+
+        </div>
+  </div>
+</div>
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
