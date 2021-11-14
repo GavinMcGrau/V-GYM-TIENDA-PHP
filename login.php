@@ -89,18 +89,23 @@ if($array ['contar']>0 ){?>
   </div>
   <div class="container contenedorActividades">
     <div class="card-columns">
-      <div class="card">
+      
         
-        <a href="#">
+      
+      
           <?php 
-          $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo'";
+ $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo'";
           $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
           $knowActividad = mysqli_fetch_array($consultaImagenActividad);
           $imagenActividad = $knowActividad["imagenActividad"];
           $claseActividad = $knowActividad["claseActividad"];
           $subClaseActividad = $knowActividad["subclaseActividad"];
           $nombreActividad =$knowActividad["nombreActividad"];
-                   ?> 
+          while (($fila = mysqli_fetch_array($consultaImagenActividad))!=NULL){
+
+            ?> 
+            <div class="card">
+        <a href="#">
 
         <img class="card-img-top" src= "<?php echo $imagenActividad?>" alt="Card image cap">
         <div class="card-body">
@@ -110,6 +115,13 @@ if($array ['contar']>0 ){?>
       </div>
         </a>
           </div>
+            <?php
+//Operaciones a realizar
+
+}
+         
+                   ?> 
+
 
 <!--  -->
            <div class="card">
