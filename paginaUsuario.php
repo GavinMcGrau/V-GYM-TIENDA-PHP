@@ -3,19 +3,24 @@
 session_start();
 include "connection.php";
  include "plantillaHtml.php";
+ setlocale(LC_TIME,"spanish");
 
    ?>
 <div class="container contenedorCentral">
   <div class="w dia">
+    
     <h1><?php echo ucwords(strftime("%A"));  ?></h1>
   </div>
   <div class="container contenedorActividades">
     <div class="card-columns">
-      
-        
-      
-      
-          <?php 
+      <?php 
+    $sqlVacio= "SELECT idUsuario as usuario from actividades where idUsuario= '$correo'";
+    $consultaVacio = mysqli_query($con,$sqlVacio);
+     if(($knowVacio = mysqli_fetch_array($consultaVacio))==NULL ){?>
+      <h2>Aun no tienes ejercicios</h2>
+     <div class="btn btn-primary"  ><a style="color:white;"href="masActividades.php">Empecemos!</a> </div>
+      <?php
+         }else{ 
  $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo'";
           $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
          
@@ -40,4 +45,6 @@ include "connection.php";
             <?php
 
           }
+          
+        }
 ?>

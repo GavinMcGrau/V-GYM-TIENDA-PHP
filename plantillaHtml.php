@@ -1,5 +1,7 @@
 <?php 
 include "connection.php";
+setlocale(LC_TIME,"es_ES.UTF-8s");
+setlocale(LC_TIME,"es_ES");
 
 $correo=$_SESSION['correo'];
 $contrasenya= $_SESSION['contrasenya'];
@@ -61,7 +63,7 @@ $fotoUsuario = $knowFoto['imagens'];
                 <a href="masActividades.php" class="nav-link text-white"> <span class="ms-2">Ejercicios</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <span class="ms-2">My Orders</span> </a>
+                <a href="configUsuario.php" class="nav-link text-white"> <span class="ms-2">Mi prefil</span> </a>
             </li>
             <li>
                 <a href="#" class="nav-link text-white"> <span class="ms-2">Settings</span> </a>
