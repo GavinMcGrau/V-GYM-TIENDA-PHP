@@ -20,6 +20,44 @@
     position: fixed;
 }
 
+.hola {
+    width: 20vw;
+    height: 40vh;
+    margin-left: 110%;
+    border-radius: 0.5rem;
+}
+
+.box {}
+
+.box select {
+    background-color: darkorange;
+    color: white;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 0.5rem;
+}
+
+.box::before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    pointer-events: none;
+}
+
+.box select option {
+    padding: 30px;
+}
+
 .anyadir {
     background-image: url('https://w7.pngwing.com/pngs/748/765/png-transparent-computer-icons-plus-and-minus-signs-symbol-cross-shaped-miscellaneous-cross-sign.png');
     width: 2vw;
@@ -53,14 +91,14 @@
 }
 
 .pruebaphp {
-    background: linear-gradient(#5b22aac7, #1492b1c7);
+    background: linear-gradient(#655c70c7, #617980de);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
 }
 
 .crearUsuariophp {
-    background: linear-gradient(#5b22aac7, #1492b1c7);
+    background: linear-gradient(#4c4752c7, #475a5fe1);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -82,7 +120,8 @@
 
 .loginPage {
     width: fit-content;
-    height: 10%;
+    height: 10vh;
+    width: 15vw;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 25%;
     margin-top: 30%;
@@ -93,9 +132,10 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 0.5rem;
     border-style: solid;
-    border-color: aqua;
+    border-color: darkorange;
+    ;
 }
 
 .loginPageText {
@@ -105,12 +145,13 @@
 
 .loginPage:hover {
     transition: 1s;
-    border-radius: 9%;
+    border-radius: 1rem;
 }
 
 .crearPage {
     width: fit-content;
-    height: 10%;
+    height: 10vh;
+    width: 15vw;
     background-color: rgba(73, 73, 73, 0.747);
     margin-left: 60%;
     margin-top: 30%;
@@ -121,9 +162,9 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 0.5rem;
     border-style: solid;
-    border-color: aqua;
+    border-color: darkorange;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -132,15 +173,26 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+input[type="number"] {
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 .crearPage:hover {
     transition: 1s;
-    border-radius: 9%;
+    border-radius: 1rem;
 }
 
 .login {
     height: 40vh;
     width: 350px;
-    background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));
+    background: linear-gradient(to top left, rgba(102, 93, 93, 0.74), rgba(62, 74, 87, 0.89));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,7 +200,7 @@
     margin: auto;
     padding: 10px;
     margin-top: 20%;
-    border-radius: 20%;
+    border-radius: 2rem;
     left: 50%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -158,7 +210,7 @@
     width: 7vh;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
+    border-radius: 5rem;
     margin-left: 3%;
     vertical-align: middle;
     margin-top: 1.5%;
@@ -169,14 +221,14 @@
     height: 2vh;
     width: 2vh;
     background-image: url(/images/perfil/edit.png);
-    border-radius: 50%;
+    border-radius: 5rem;
     background-size: cover;
     margin-left: 10%;
     position: absolute;
 }
 
 .bodyLogin {
-    background: linear-gradient(#5b22aac7, #1492b1c7);
+    background: linear-gradient(#5c5861c7, #5a7177fb);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -187,7 +239,7 @@
 .mal {
     height: 40vh;
     width: 390px;
-    background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));
+    background: linear-gradient(to top left, rgba(66, 54, 54, 0.74), rgb(74, 81, 88));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +247,7 @@
     margin: auto;
     padding: 10px;
     margin-top: 20%;
-    border-radius: 20%;
+    border-radius: 2rem;
     left: 50%;
     color: aliceblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -214,7 +266,7 @@
 .volver {
     text-decoration: none;
     border-color: rgb(255, 255, 255);
-    border-radius: 50px;
+    border-radius: 0.5rem;
     width: 20%;
     height: 10%;
     color: ivory;
@@ -233,21 +285,20 @@
 }
 
 .tituloLogin {
-    width: 12vw;
-    height: 8vh;
+    width: 15vw;
+    height: 10vh;
     background-color: rgba(73, 73, 73, 0.253);
-    margin-left: 43.5%;
+    left: 43%;
     margin-top: -10%;
     position: absolute;
-    padding: 0%;
     font-size: 400%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 0.5rem;
     border-style: solid;
-    border-color: aqua;
+    border-color: darkorange;
     color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -277,7 +328,7 @@ input {
     border: unset;
     border-bottom: 1px solid;
     background-color: transparent;
-    border-bottom-color: cyan;
+    border-bottom-color: darkorange;
     color: white;
     cursor: pointer;
     outline: none;
@@ -300,8 +351,8 @@ input:focus {
     background-color: transparent;
     width: 25%;
     height: 30px;
-    color: cyan;
-    border: 1px solid cyan;
+    color: darkorange;
+    border: 3px solid rgb(86, 112, 112);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,7 +367,7 @@ input:focus {
 
 @keyframes bloomButton {
     0% {
-        color: cyan;
+        color: darkorange;
     }
     100% {
         color: white;
@@ -326,9 +377,17 @@ input:focus {
 
 /* ////////////////////////////////// */
 
+.barraPlantilla {
+    box-shadow: darkorange 4px 0px 5px;
+}
+
+.nav-link:hover {
+    background-color: darkorange !important;
+}
+
 .barra {
     height: 5vh;
-    background-color: rgb(59, 175, 221);
+    background-color: darkorange;
     position: absolute;
     z-index: 5;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -346,6 +405,8 @@ input:focus {
     height: 101vh;
     margin-left: -1%;
     background-color: rgba(71, 135, 255, 0.315);
+    border-width: 25px;
+    border-color: darkorange;
     position: absolute;
     z-index: 1;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -368,19 +429,19 @@ input:focus {
 }
 
 .enlaceRegister {
-    background: linear-gradient(to top left, rgba(155, 32, 32, 0.74), rgba(15, 78, 151, 0.74));
+    background: linear-gradient(to top left, rgba(97, 83, 83, 0.74), rgba(41, 47, 54, 0.74));
     height: 5vh;
     width: 13vh;
     margin-left: 70%;
     margin-top: -25%;
-    border-radius: 5%;
+    border-radius: 0.5rem;
     color: beige;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .enlaceRegister:hover {
-    box-shadow: 2px 2px aqua;
+    box-shadow: 1px 1px darkorange;
 }
 
 .loginDirect {

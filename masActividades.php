@@ -6,23 +6,15 @@ include "connection.php";
 
 include "plantillaHtml.php";
 
-
 ?>
     <link rel="stylesheet" href="styles/stylesCards.css">
->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:100,200,300,400,500,700,800,900" rel="stylesheet">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 
-    <div class="boton" style="margin-left: 27vw;">Todo</div>
-     <div class="boton" style="margin-left: 45vw;">Tren Superior</div>
-      <div class="boton" style="margin-left: 63vw;">Tren Inferior</div>
+  
        
 
  <div class="container contenedorCentral">
   
-            <div class="container contenedorActividades">
-    <div class="card-columns ">
+            
         <?php
  $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario=1";
           $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
@@ -36,20 +28,59 @@ include "plantillaHtml.php";
 
             ?> 
 
-           
-            <div class="card actividadPrincipal">
-            
-      <!--   <a href="#"> -->
+        
+<!-- <div class="card-columns"> -->
+          <div class="card-columns col-15 mb-5">
+              
+    <div class="card flip-card">
+        <div class="flip-card-inner"> 
+            <div class="flip-card-front"><!-- frente de la tarjeta -->
+                <div class="mask">
+                    <div class="align-end texto">
+                        <?php echo ucwords($nombreActividad) ?>
+                    </div>
+                </div>
+                <img src="<?php echo $imagenActividad?>" alt="imagen"><!-- Imagen frontal -->
+            </div>
 
-        <img class="card-img-top " src= "<?php echo $imagenActividad?>" alt="Card image cap">
-        <div class="card-body">
             
-          <h5 class="card-title "><?php echo ucwords($nombreActividad) ?></h5>
-          <p class="card-text"><?php echo  $claseActividad ?> - <?php echo $subClaseActividad?> </p>
-          <div class="anyadir" ></div>
-         
-      </div>
-        </a>
-          </div>
+            <div class="flip-card-back"><!-- reverso de la tarjeta -->
+                <div class="row no-gutters">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo ucwords($nombreActividad) ?></h5>
+                        <p class="card-text pl-2 mt-2"><?php echo  $claseActividad ?> - <?php echo $subClaseActividad?> </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="hola" >
+        <form method='post'  class='login' id='login' action='./login.php'>
+
+<input name='cantidad' class=' ' placeholder='0' type='number' required autofocus>
+
+<div class="box">
+<select>
+
+	<option>lunes </option>
+	<option>martes</option>
+	<option>miercoles</option>
+    <option>jueves </option>
+    <option>viernes </option>
+    <option>sabado</option>
+    <option>domingo</option>
+
+</select> 
+ </div>
+     <button class='enviarLogin' name='submit ' type='submit ' id='contact-submit ' data-submit='...Enviant '>Añadir</button>
+ 
+ </form>
+    </div>
+    
+  <!--   </div> -->
+          
+</div>
           
 <?php }?>

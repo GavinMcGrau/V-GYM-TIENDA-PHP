@@ -40,7 +40,7 @@ $fotoUsuario = $knowFoto['imagens'];
 </head>
 
 
-<body class="bodyUserPage">
+<body class="bodyUserPage ">
 
 
 
@@ -50,16 +50,16 @@ $fotoUsuario = $knowFoto['imagens'];
 
 
 
-    <div class=" d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark position-fixed" style="width: 250px;">
-        <a href="/" class="d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="100"> </svg>
+    <div class=" barraPlantilla d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark position-fixed" style="width: 250px;">
+        <a href="/" class=" d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="100"> </svg>
             <h2 class="fs-4 ">BreakEnds</h2>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="paginaUsuario.php" class="nav-link active" aria-current="page"> <span class="ms-2">Inicio</span> </a>
+                <a href="paginaUsuario.php" class="nav-link text-white" aria-current="page"> <span class="ms-2">Inicio</span> </a>
             </li>
-            <li>
+            <li> 
                 <a href="masActividades.php" class="nav-link text-white"> <span class="ms-2">Ejercicios</span> </a>
             </li>
             <li>
