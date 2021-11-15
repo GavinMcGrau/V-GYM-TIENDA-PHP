@@ -4,7 +4,7 @@ session_start();
 include "connection.php";
  include "plantillaHtml.php";
  setlocale(LC_TIME,"spanish");
-
+$dia=strftime("%A");
    ?>
 <div class="container contenedorCentral">
   <div class="w dia">
@@ -21,7 +21,7 @@ include "connection.php";
      <div class="btn btn-primary"  ><a style="color:white;"href="masActividades.php">Empecemos!</a> </div>
       <?php
          }else{ 
- $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo'";
+ $sqlImagenActividad="SELECT foto as imagenActividad,clase as claseActividad,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo' && dia='$dia'";
           $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
          
           while ($knowActividad = mysqli_fetch_array($consultaImagenActividad)){
@@ -31,6 +31,8 @@ include "connection.php";
           $subClaseActividad = $knowActividad["subclaseActividad"];
           $nombreActividad =$knowActividad["nombreActividad"];
             ?> 
+
+            <div class="formAnyadir"></div>
             <div class="card">
         <a href="#">
 
