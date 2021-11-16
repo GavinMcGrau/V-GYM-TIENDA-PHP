@@ -37,6 +37,19 @@
     transform: rotateY(180deg);
 }
 
+.card-body {
+    padding: 0%;
+}
+
+.videosYoutube {
+    min-height: 40vh;
+    min-width: 23vw;
+    max-width: 45vw;
+    max-height: 50vh;
+    margin-bottom: 0%;
+    border-style: none;
+}
+
 
 /* Estructura básica de las dos caras */
 
@@ -93,7 +106,7 @@
 /* Estructura específica de la cara trasera */
 
 .flip-card-back {
-    background-color: #EDFFF6;
+    background-color: #edfff600;
     transform: rotateY(180deg);
     /* Ajusta la altura del texto al centro de la tarjeta */
     display: flex;
