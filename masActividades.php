@@ -1,5 +1,6 @@
 <?php
 
+
 session_start();
 include "connection.php";
 
@@ -33,8 +34,12 @@ include "plantillaHtml.php";
           $subClaseActividad = $knowActividad["subclaseActividad"];
           $nombreActividad =$knowActividad["nombreActividad"];
           $descripcionActividad= $knowActividad["descripcionActividad"];
-
+          
+          
+        
             ?> 
+
+            
 
         
 <!-- <div class="card-columns"> -->
@@ -45,10 +50,11 @@ include "plantillaHtml.php";
             <div class="flip-card-front"><!-- frente de la tarjeta -->
                 <div class="mask">
                     <div class="align-end texto">
-                        <?php echo ucwords($nombreActividad) ?>
+                        
+                        <?php echo ucwords($nombreActividad); ?>
                     </div>
                 </div>
-                <img src="<?php echo $imagenActividad?>" alt="imagen"><!-- Imagen frontal -->
+                <img src="<?php echo $imagenActividad;?>" alt="imagen"><!-- Imagen frontal -->
             </div>
             <div class="flip-card-back"><!-- reverso de la tarjeta -->
                 <div class="row no-gutters">
@@ -65,25 +71,37 @@ include "plantillaHtml.php";
 
     </div>
     <div class="hola" >
-        <form method='post'  class='login' id='login' action='./login.php'>
+
+        <form method='post'  class='login' id='anyadirActividad'  action='anyadirActividad.php'>
 <h5 style="color:white;">Series</h5>
-<input name='Series' class='inputs' style="width:4vw;" placeholder='Series' type='number'  required autofocus>
+<input name='series' class='inputs' style="width:4vw;" placeholder='Series' type='number'  required autofocus>
 <br>
 <h5 style="color:white;">Repeticiones</h5>
-<input name='Repeticiones' class=' ' style="width:4vw;"  placeholder='Repeticiones' type='number' required autofocus>
+<input name='repeticiones' class=' ' style="width:4vw;"  placeholder='Repeticiones' type='number' required autofocus>
 <br>
 <div class="box">
-<select>
+<select name=dia>
 
-	<option>lunes </option>
-	<option>martes</option>
-	<option>miercoles</option>
-    <option>jueves </option>
-    <option>viernes </option>
-    <option>sabado</option>
-    <option>domingo</option>
+	<option value="lunes">lunes </option>
+	<option value="martes">martes</option>
+	<option value="miercoles">miercoles</option>
+    <option value="jueves">jueves </option>
+    <option value="viernes">viernes </option>
+    <option value="sabado">sabado</option>
+    <option value="domingo">domingo</option>
 
 </select> 
+
+<select name='nombreActividad' style="display:none" > <option value="<?php echo $nombreActividad ?>"></option></select>
+<select name='imagenActividad' style="display:none"> <option value="<?php echo $imagenActividad ?>"></option> </select>
+<select name='descripcionActividad' style="display:none"> <option value="<?php echo $descripcionActividad ?>"></option> </select>
+<select name='claseActividad' style="display:none"> <option value="<?php echo $claseActividad ?>"></option> </select>
+<select name='subClaseActividad' style="display:none"> <option value="<?php echo $subClaseActividad ?>"></option> </select>
+
+
+
+
+
 <br>
 <br>
  </div>
@@ -95,5 +113,5 @@ include "plantillaHtml.php";
   <!--   </div> -->
           
 </div>
-          
+          <script src='node_modules/jquery/dist/jquery.min.js'>  </script>
 <?php }?>
