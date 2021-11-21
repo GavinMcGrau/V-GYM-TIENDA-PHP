@@ -1,3 +1,4 @@
+
 <?php 
 
 session_start();
@@ -19,8 +20,10 @@ $checkno="img\check-box-empty.png";
     $sqlVacio= "SELECT idUsuario as usuario from actividades where idUsuario= '$correo' && dia= '$dia'";
     $consultaVacio = mysqli_query($con,$sqlVacio);
      if(($knowVacio = mysqli_fetch_array($consultaVacio))==NULL ){?>
+      <div class="sinActividades">
       <h2>Aun no tienes ejercicios</h2>
      <div class="btn btn-primary"  ><a style="color:white;"href="masActividades.php">Empecemos!</a> </div>
+     </div>
       <?php
          }else{ 
  $sqlImagenActividad="SELECT id as idActividad,hecha as si,foto as imagenActividad,clase as claseActividad,cantidad as cantidadA,repeticiones as repeticionesA,subclase as subclaseActividad,nombre as nombreActividad from actividades where idUsuario= '$correo' && dia='$dia'";

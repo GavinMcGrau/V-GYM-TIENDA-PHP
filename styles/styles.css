@@ -30,6 +30,11 @@ html {
     outline: inherit;
 }
 
+.sinActividades {
+    margin-top: 10%;
+    position: absolute;
+}
+
 .card-title {
     text-align: center !important;
 }
@@ -514,6 +519,19 @@ input:focus {
 
 .repeticiones {
     text-decoration: none !important;
+}
+
+.cambioAvatar {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.formAvatar {
+    left: -1%;
+    position: absolute;
+    width: 30vw !important;
 }
 
 

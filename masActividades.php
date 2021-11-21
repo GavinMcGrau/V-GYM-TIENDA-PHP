@@ -74,10 +74,10 @@ include "plantillaHtml.php";
 
         <form method='post'  class='login' id='anyadirActividad'  action='anyadirActividad.php'>
 <h5 style="color:white;">Series</h5>
-<input name='series' class='inputs' style="width:4vw;" placeholder='Series' type='number'  required autofocus>
+<input name='series' class='inputs' style="width:4vw;" placeholder='' type='number'  required autofocus>
 <br>
 <h5 style="color:white;">Repeticiones</h5>
-<input name='repeticiones' class=' ' style="width:4vw;"  placeholder='Repeticiones' type='number' required autofocus>
+<input name='repeticiones' class=' ' style="width:4vw;"  placeholder='' type='number' required autofocus>
 <br>
 <div class="box">
 <select name=dia>
