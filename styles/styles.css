@@ -155,19 +155,19 @@ html {
     background-repeat: no-repeat !important;
 }
 
-.pruebaphp {
-    background: linear-gradient(#655c70c7, #617980de);
+.inicioPaginaBackgorund {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
 }
 
-.crearUsuariophp {
-    background: linear-gradient(#4c4752c7, #475a5fe1);
+
+/* .crearUsuariophp {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
 }
+ */
 
 #backVideo {
     object-fit: inherit;
@@ -418,7 +418,7 @@ input:focus {
     width: 25%;
     height: 30px;
     color: darkorange;
-    border: 3px solid rgb(86, 112, 112);
+    border: 2px solid darkorange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,17 +521,52 @@ input:focus {
     text-decoration: none !important;
 }
 
-.cambioAvatar {
-    width: 50%;
+.formAvatar {
+    left: 0%;
     position: absolute;
-    top: 50%;
-    left: 40%;
+    width: 33vw !important;
 }
 
-.formAvatar {
-    left: -1%;
+.datosUsuario {
+    width: 25vw;
+    height: 40vh;
+    background-color: #343a40;
     position: absolute;
-    width: 30vw !important;
+    left: 53%;
+    margin-left: -12.5vw;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.imagenUser {
+    width: 9vw;
+    height: 18vh;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -4.5vw;
+}
+
+.contenedorCambioDatos {
+    width: 35vw;
+    height: 40vh;
+    background-color: #343a40;
+    position: absolute;
+    left: 49%;
+    top: 60%;
+    margin-left: -12.5vw;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.cambioAvatar {
+    width: 33vw;
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    margin-left: 12.5vw;
+    text-align: center;
+    color: white;
 }
 
 
