@@ -67,10 +67,10 @@ $fotoUsuario = $knowFoto['imagens'];
                 <a href="configUsuario.php" class="nav-link text-white"> <span class="ms-2">Mi prefil</span> </a>
                 </li>
             <li>
-                <a href="#" class="nav-link text-white"> <span class="ms-2">Settings</span> </a>
+                <a href="#" class="nav-link text-white"> <span class="ms-2">Personal Training</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <span class="ms-2">Bookmarks</span> </a>
+                <a href="#" class="nav-link text-white"> <span class="ms-2">Tienda</span> </a>
             </li>
         </ul>
         <h3 class="d-flex align-items-center text-white text-decoration-none nombre" aria-expanded="false">

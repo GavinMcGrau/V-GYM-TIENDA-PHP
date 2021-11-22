@@ -53,23 +53,16 @@ $checkno="img\check-box-empty.png";
 
             </form>
 
-            <form method='post'  action="checkSend.php">
-             <input name="checo" class="checko"
-              <?php if($hecha == "no"){ 
-             echo `style:"background-image: url("$checkno")"`; } ?>;class="checkbox" onChange="this.form.submit()" ></input>
-              <select name='id' style="display:none" > <option value="<?php echo $correo ?>"></option></select>
-      </form>
+            
       <select name='id' style="display:none" > <option value="<?php echo $id ?>"></option></select>
         <img class="card-img-top " src= "<?php echo $imagenActividad?>" alt="Card image cap"></div>
      
         <div class="card-body">
          
           <h5 class="card-title"><?php echo ucwords($nombreActividad)?></h5>
-          <h5><?php echo  $hecha ?> </h5>
           <p class="card-text"><?php echo  $claseActividad ?> - <?php echo $subClaseActividad?> </p>
-          
-          <h5 class="repeticiones">  &nbsp Series: <?php echo $series ?> &nbsp &nbsp &nbsp &nbsp &nbsp Repeticiones: <?php echo $repeticiones ?> </h5>
-          
+          <h5 class="series">Series: <?php echo $series ?></h5>
+          <h5 class="repeticiones">Repeticiones: <?php echo $repeticiones ?> </h5>
       </div>
 
      

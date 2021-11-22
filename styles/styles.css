@@ -528,19 +528,60 @@ input:focus {
 }
 
 .datosUsuario {
-    width: 25vw;
-    height: 40vh;
+    width: 30vw;
+    height: 50vh;
     background-color: #343a40;
     position: absolute;
     left: 53%;
-    margin-left: -12.5vw;
+    margin-left: -15vw;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+.datosUser {
+    top: 65%;
+    position: absolute;
+    left: 50%;
+    margin-left: -11vw;
+    width: 22vw;
+    color: white;
+}
+
+.inputBio {
+    width: 5vw !important;
+}
+
+.formNombre {
+    margin-top: 20%;
+    left: 12%;
+    position: absolute;
+}
+
+.inputNombre {
+    width: 25vw;
+}
+
+.formEdad {
+    left: 10%;
+    position: absolute;
+}
+
+.formPeso {
+    left: 40%;
+    position: absolute;
+}
+
+.formAltura {
+    left: 60%;
+    position: absolute;
 }
 
 .imagenUser {
     width: 9vw;
     height: 18vh;
+    top: 10%;
     position: absolute;
     border-radius: 50%;
     left: 50%;
@@ -548,13 +589,13 @@ input:focus {
 }
 
 .contenedorCambioDatos {
-    width: 35vw;
-    height: 40vh;
+    width: 55vw;
+    height: 50vh;
     background-color: #343a40;
     position: absolute;
     left: 49%;
-    top: 60%;
-    margin-left: -12.5vw;
+    top: 52%;
+    margin-left: -22.5vw;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
@@ -562,11 +603,15 @@ input:focus {
 .cambioAvatar {
     width: 33vw;
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 25%;
     margin-left: 12.5vw;
     text-align: center;
     color: white;
+}
+
+.card-body {
+    text-align: center;
 }
 
 

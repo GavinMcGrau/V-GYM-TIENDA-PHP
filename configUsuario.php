@@ -19,9 +19,18 @@ $alturaUser= $dataConsulta['alt'];
 
 ?>
 
+<body style="overflow:hidden;">
+    
+</body>
+
 <div class="datosUsuario">
     <div > <img class="imagenUser" src="<?php echo $imagenUser; ?>" alt=""></div>
-
+    <div class="datosUser">
+     <h5>Nombre: <?php echo $nombreUser ?></h5>
+    <h5>Peso: <?php echo $pesoUser ?> &nbsp&nbspAltura: <?php echo $alturaUser ?>&nbsp&nbsp  Edad: <?php echo $edadUser ?></h5>
+   
+    
+    </div>
 </div>
 
 <div class="contenedorCambioDatos"></div>
@@ -29,11 +38,33 @@ $alturaUser= $dataConsulta['alt'];
 <div class="cambioAvatar">
 
 
-    <h5>Para cambiar de avatar introduce la URL de la imagen</h5>
-    <form action="cambioAvatar.php" class="formAvatar">
-    <input type="text" class="formAvatar">
+    
+    <form method='POST' enctype="multipart/form-data"  action="cambioAvatar.php" class="formAvatar">
+        <h5>Para cambiar de avatar introduce la URL de la imagen</h5>
+    <input type="file" ctextlass="formAvatar" name="foto" >
+    <button type="submit" >Enviar
     </form>
+</div>
+<div class="cambioAvatar">
+      <form method='POST' action="cambioBio.php" class="formNombre">
+         <h5>nombre</h5>
+    <input type='text' class="inputNombre" name="nombre" value="<?php echo $nombreUser ?>" >
+    
+   <div class="formEdad">
+         <h5>Edad</h5>
+    <input type='number' class="inputBio" name="edad" value="<?php echo $edadUser ?>">
+    </div>
 
+    <div class="formPeso">
+         <h5>Peso</h5>
+    <input type='number' class="inputBio" name="peso" value="<?php echo $pesoUser ?>" >
+    </div>
+     <div class="formAltura">
+         <h5>Altura</h5>
+    <input type='double' class="inputBio" name="altura" value="<?php echo $alturaUser ?>" >
+    </div>
+    
+    </form>
 
 </div>
 
