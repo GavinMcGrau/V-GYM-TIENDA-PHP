@@ -40,15 +40,19 @@ $alturaUser= $dataConsulta['alt'];
 
     
     <form method='POST' enctype="multipart/form-data"  action="cambioAvatar.php" class="formAvatar">
-        <h5>Para cambiar de avatar introduce la URL de la imagen</h5>
-    <input type="file" ctextlass="formAvatar" name="foto" >
-    <button type="submit" >Enviar
+        <h5>Para cambiar de avatar sube tu imagen</h5>
+    <div class="file-input">
+        <input type="file" id="file" class="file" name="foto">
+        <label for="file">Subir</label>
+    </div>
+    <button type="submit" class="botonBio" >Enviar
     </form>
 </div>
+
 <div class="cambioAvatar">
       <form method='POST' action="cambioBio.php" class="formNombre">
          <h5>nombre</h5>
-    <input type='text' class="inputNombre" name="nombre" value="<?php echo $nombreUser ?>" >
+    <input  ype='text' class="inputNombre" name="nombre" value="<?php echo $nombreUser ?>" >
     
    <div class="formEdad">
          <h5>Edad</h5>
@@ -62,8 +66,10 @@ $alturaUser= $dataConsulta['alt'];
      <div class="formAltura">
          <h5>Altura</h5>
     <input type='double' class="inputBio" name="altura" value="<?php echo $alturaUser ?>" >
+
+    <button type="submit" class="botonBios" >Enviar
     </div>
-    
+
     </form>
 
 </div>

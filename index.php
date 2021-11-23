@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+
+session_start();
+if($_SESSION['correo'] != NULL){
+header('location:paginaUsuario.php');
+}
+
+?>
 
 <head>
     <meta charset="UTF-8">

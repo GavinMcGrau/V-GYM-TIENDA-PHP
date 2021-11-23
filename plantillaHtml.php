@@ -70,7 +70,7 @@ $fotoUsuario = $knowFoto['imagens'];
                 <a href="#" class="nav-link text-white"> <span class="ms-2">Personal Training</span> </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white"> <span class="ms-2">Tienda</span> </a>
+                <a href="tienda.php" class="nav-link text-white"> <span class="ms-2">Tienda</span> </a>
             </li>
         </ul>
         <h3 class="d-flex align-items-center text-white text-decoration-none nombre" aria-expanded="false">

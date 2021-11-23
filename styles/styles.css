@@ -30,6 +30,23 @@ html {
     outline: inherit;
 }
 
+.add {
+    position: absolute;
+    left: 90%;
+    width: 2vw;
+    height: 4vh;
+    background-image: url(/img/addIcon.png);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 .sinActividades {
     margin-top: 10%;
     position: absolute;
@@ -549,6 +566,72 @@ input:focus {
     color: white;
 }
 
+.botonBio {
+    background-color: transparent;
+    width: 6vw;
+    height: 30px;
+    color: darkorange;
+    border: 2px solid darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: calibri;
+    cursor: pointer;
+    animation: bloomButton infinite 2s ease-in-out;
+    animation-direction: alternate-reverse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.botonBios {
+    background-color: transparent;
+    width: 6vw;
+    height: 4.5vh;
+    color: darkorange;
+    border: 2px solid darkorange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: calibri;
+    cursor: pointer;
+    animation: bloomButton infinite 2s ease-in-out;
+    animation-direction: alternate-reverse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: -113%;
+    margin-top: 15%;
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    display: block;
+    left: 27%;
+    margin-top: 2.9%;
+    position: absolute;
+    width: 6vw;
+    height: 4.5vh;
+    border-radius: 0.5rem;
+    background: darkorange;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .inputBio {
     width: 5vw !important;
 }
@@ -564,17 +647,20 @@ input:focus {
 }
 
 .formEdad {
-    left: 10%;
+    margin-top: 5%;
+    left: 15%;
     position: absolute;
 }
 
 .formPeso {
+    margin-top: 5%;
     left: 40%;
     position: absolute;
 }
 
 .formAltura {
-    left: 60%;
+    margin-top: 5%;
+    left: 65%;
     position: absolute;
 }
 
@@ -603,7 +689,7 @@ input:focus {
 .cambioAvatar {
     width: 33vw;
     position: absolute;
-    top: 60%;
+    top: 58%;
     left: 25%;
     margin-left: 12.5vw;
     text-align: center;

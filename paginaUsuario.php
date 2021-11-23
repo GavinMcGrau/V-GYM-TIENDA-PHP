@@ -6,8 +6,7 @@ include "connection.php";
  include "plantillaHtml.php";
  setlocale(LC_TIME,"spanish");
 $dia=strftime("%A");
-$checkyes="img\delete-512.png";
-$checkno="img\check-box-empty.png";
+
    ?>
 <div class="container contenedorCentral">
   <div class="w dia">
@@ -30,7 +29,7 @@ $checkno="img\check-box-empty.png";
           $consultaImagenActividad=mysqli_query($con,$sqlImagenActividad);
          
           while ($knowActividad = mysqli_fetch_array($consultaImagenActividad)){
- ;
+ 
           $imagenActividad = $knowActividad["imagenActividad"];
           $claseActividad = $knowActividad["claseActividad"];
           $subClaseActividad = $knowActividad["subclaseActividad"];
@@ -43,7 +42,7 @@ $checkno="img\check-box-empty.png";
         
             ?> 
 
-            <div class="formAnyadir"></div>
+           
             <div class="card">
             
             <div>
