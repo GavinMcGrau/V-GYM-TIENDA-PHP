@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-
-session_start();
-if($_SESSION['correo'] != NULL){
-header('location:paginaUsuario.php');
-}
-
-?>
-
-<head>
-    <meta charset="UTF-8">
+    <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
+<?php 
 
-<body style="background-color: rgb(0, 0, 0);">
+session_start();
+
+if($_SESSION != NULL){
+header('location:paginaUsuario.php');
+}
+
+?>
+
+
+
+<body>
 
     <a class="nombreFit" id="nombre">BreakEnds</a>
 

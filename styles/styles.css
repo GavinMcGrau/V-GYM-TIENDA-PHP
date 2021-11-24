@@ -47,6 +47,38 @@ html {
     outline: inherit;
 }
 
+.carritoBox {
+    position: absolute;
+    background-color: #343a40;
+    width: 5vw;
+    height: 9vh;
+    border-radius: 50%;
+    left: 95vw;
+    top: 1%;
+    transition: 2s;
+}
+
+.carritoIcon {
+    background-image: url(/img/istockphoto-1094337676-170667a-removebg-preview.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 4.8vw;
+    height: 9vh;
+}
+
+.carritoBox:hover {
+    height: 50vh;
+    width: 15vw;
+    left: 85vw;
+    border-radius: 0.5rem;
+    z-index: 2;
+}
+
+.carritoBox:hover>.carritoIcon {
+    background-image: none;
+}
+
 .sinActividades {
     margin-top: 10%;
     position: absolute;
@@ -64,6 +96,7 @@ html {
     background: rgba(100, 99, 97, 0.568) !important;
     border-width: 25px;
     align-items: center;
+    z-index: 1;
 }
 
 .card-img-top {

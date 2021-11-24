@@ -4,16 +4,34 @@
 session_start();
  include "connection.php";
  include "plantillaHtml.php";
+
+ $sqlCountActividad="SELECT COUNT(*) as contar FROM `carrito` WHERE `idUsuario`='".$_SESSION['correo']."'";
+$consultaSQL=mysqli_query($con,$sqlCountActividad) ;
+
+$contar= mysqli_fetch_array($consultaSQL);
+
+if($contar['contar']>=1){
+    ?>
+    <div class="carritoBox"><div class="carritoIcon"></div></div>
+    
+    <?php
+}
 ?>
    <link rel="stylesheet" href="styles.css">
 <div class="container contenedorCentral">
   <div class="w dia">
     
-    <h1 class="dias" ><?php echo ucwords(strftime("%A"));  ?></h1>
-  </div>
+  </div>    <h1 class="dias" ></h1>
+
+
+
+  
+
   <div class="container contenedorActividades">
     <div class="card-columns">
 <?php 
+
+
 
  $sqlProductos="SELECT nombre as nombre,precio as precio,id as id,imagen as imagen from productos";
           $consultaProductos=mysqli_query($con,$sqlProductos);

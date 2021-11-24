@@ -1,17 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    
 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!--  <link rel="stylesheet" href="styles/styles.scss"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+</head>
 <?php 
 
 session_start();
 include "connection.php";
  include "plantillaHtml.php";
- setlocale(LC_TIME,"spanish");
-$dia=strftime("%A");
+ setlocale(LC_TIME,'es-ES');
+ $dia=strftime("%A");
+ if(strftime("%u")==3){
+   $dia="Miércoles";
+ }elseif(strftime("%u")==6){
+   $dia="Sábado";
+ }
+
+
+
 
    ?>
 <div class="container contenedorCentral">
   <div class="w dia">
     
-    <h1 class="dias" ><?php echo ucwords(strftime("%A"));  ?></h1>
+    <h1 class="dias" ><?php echo ucwords($dia); ?></h1>
   </div>
   <div class="container contenedorActividades">
     <div class="card-columns">
@@ -20,7 +42,7 @@ $dia=strftime("%A");
     $consultaVacio = mysqli_query($con,$sqlVacio);
      if(($knowVacio = mysqli_fetch_array($consultaVacio))==NULL ){?>
       <div class="sinActividades">
-      <h2>Aun no tienes ejercicios</h2>
+      <h2>Aun no tienes ejerciciòs</h2>
      <div class="btn btn-primary"  ><a style="color:white;"href="masActividades.php">Empecemos!</a> </div>
      </div>
       <?php
