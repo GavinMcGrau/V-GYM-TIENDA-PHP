@@ -11,5 +11,7 @@ $dia =strftime("%A");
 
  $sqlCheck="DELETE FROM actividades  WHERE id = '$id' && dia='$dia'";
  $consultas=mysqli_query($con,$sqlCheck);
+
+ 
 header('location:paginaUsuario.php');
 ?>
