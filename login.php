@@ -11,19 +11,28 @@ $contrasenya2=$_POST['contrasenya'];
 $_SESSION['correo']=$_POST['correo'];
 $_SESSION['contrasenya']=$_POST['contrasenya'];
 
-$sql2 = "SELECT COUNT(*) as contar from usuario where correo='$correo' and contrasenya='$contrasenya2'";
+$sql1 = "SELECT COUNT(*) as contar from usuario where correo='$correo' and contrasenya='$contrasenya2' and rol='admin'";
+$consultas1=mysqli_query($con,$sql1);
+$array1 = mysqli_fetch_array($consultas1);
+
+ $sql2 = "SELECT COUNT(*) as contarUser from usuario where correo='$correo' and contrasenya='$contrasenya2'";
 $consultas=mysqli_query($con,$sql2);
 $array = mysqli_fetch_array($consultas);
 
-if($array ['contar']>0 ){
-  header('Location: paginaUsuario.php');
-  ?>
+if($array1 ['contar']>0 ){
+  header('Location: paginaAdmin.php');
+
 
    
 
 //Operaciones a realizar
 
-}
+}elseif ($array ['contarUser']>0 ){
+   
+
+  header('Location: paginaUsuario.php');
+
+
          
                    ?> 
 

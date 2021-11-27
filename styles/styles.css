@@ -3,6 +3,38 @@
         overflow-x: hidden;
     }
     
+    .inTd {
+        z-index: 1;
+        color: #fc1111;
+    }
+    
+    .dataTables_wrapper {
+        width: 70% !important;
+    }
+    
+    .tableBody {
+        background-color: rgba(235, 203, 165, 0.685) !important;
+        width: 70vw !important;
+    }
+    
+    .dataTables_wrapper {
+        position: absolute !important;
+        width: 60% !important;
+        left: 25% !important;
+    }
+    
+    .contaUsers {
+        position: absolute !important;
+        left: 40% !important;
+        top: 30%;
+    }
+    
+    .vacaciones {
+        position: absolute !important;
+        left: 40% !important;
+        top: 40%;
+    }
+    
     .checko {
         position: absolute;
         margin-top: 0%;
