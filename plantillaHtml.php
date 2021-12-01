@@ -74,6 +74,10 @@ $fotoUsuario = $knowFoto['imagens'];
             <li>
                 <a href="tienda.php" class="nav-link text-white"> <span class="ms-2">Tienda</span> </a>
             </li>
+<br><br>
+             <li>
+                <a href="logout.php" class="nav-link text-white"> <span class="ms-2">Salir</span> </a>
+            </li>
         </ul>
         <h3 class="d-flex align-items-center text-white text-decoration-none nombre" aria-expanded="false">
             <?php echo $nombreUsuario; ?>
