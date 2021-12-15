@@ -1,0 +1,27 @@
+.bodyUserPage{
+    background-color: rgba(112, 93, 58, 0.733);
+    height: 100vh;
+}
+
+
+.card{
+    height: 39vh !important;
+    width: 15vw !important;
+    top: 15vh !important;
+    margin-bottom: -36vh;
+}
+
+.card-group{
+    width: 80vw;
+}
+
+
+.flip-card:hover .texto {
+    display: none;
+}
+
+.file-input label {
+    
+    left: 30% !important;
+   
+}

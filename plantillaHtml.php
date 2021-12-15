@@ -25,10 +25,12 @@ $contrasenya= $_SESSION['contrasenya'];
 
 /* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
 
-$sql3 = "SELECT nombre as nombreUsuario from usuario where correo='$correo'";
+$sql3 = "SELECT nombre as nombreUsuario,rol as rolUsuario from usuario where correo='$correo'";
 $consultasUser=mysqli_query($con,$sql3);
 $knowUser = mysqli_fetch_array($consultasUser);
 $nombreUsuario = $knowUser['nombreUsuario'];
+$rolUsuario = $knowUser['rolUsuario'];
+
 
 $sql4 = "SELECT imagen as imagens from usuario where correo='$correo'";
 $consultasFoto=mysqli_query($con,$sql4);

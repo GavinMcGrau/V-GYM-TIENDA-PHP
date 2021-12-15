@@ -30,15 +30,14 @@ $contrasenya= $_SESSION['contrasenya'];
 
 /* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
 
-$sql3 = "SELECT nombre as nombreUsuario from usuario where correo='$correo'";
+$sql3 = "SELECT nombre as nombreUsuario,rol as rolUsuario,imagen as imagens from usuario where correo='$correo'";
 $consultasUser=mysqli_query($con,$sql3);
 $knowUser = mysqli_fetch_array($consultasUser);
 $nombreUsuario = $knowUser['nombreUsuario'];
+$rolUsuario = $knowUser['rolUsuario'];
+$fotoUsuario = $knowUser['imagens'];
 
-$sql4 = "SELECT imagen as imagens from usuario where correo='$correo'";
-$consultasFoto=mysqli_query($con,$sql4);
-$knowFoto = mysqli_fetch_array($consultasFoto);
-$fotoUsuario = $knowFoto['imagens'];
+
 
 ?>
 <body class="bodyUserPage ">
@@ -59,15 +58,20 @@ $fotoUsuario = $knowFoto['imagens'];
             <li> 
                 <a href="adminProductos.php" class="nav-link text-white"> <span class="ms-2">Productos</span> </a>
             </li>
+            <li> 
+                <a href="paginaUsuario.php" class="nav-link text-white"> <span class="ms-2">Modo Usuario</span> </a>
+            </li>
+           
+            <br><br>
+             <li>
+                <a href="logout.php" class="nav-link text-white"> <span class="ms-2">Salir</span> </a>
+            </li>
            
         </ul>
         <h3 class="d-flex align-items-center text-white text-decoration-none nombre" aria-expanded="false">
             <?php echo $nombreUsuario; ?>
         </h3>
-
         <hr>
-
-        <div class=" text-center img-fluid"> <img src="<?php echo $fotoUsuario; ?>" alt="" width="160" height="150" class="rounded-circle  fotoUser">
         </div>
     </div>
         </div>
@@ -79,3 +83,5 @@ $fotoUsuario = $knowFoto['imagens'];
    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
    <script src="./table.js"></script>
     <link rel="stylesheet" href=" https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+    <?php ?>

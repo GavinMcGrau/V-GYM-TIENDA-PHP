@@ -18,6 +18,9 @@
 }
 
 
+
+
+
 /* Este contenedor nos posiciona los dos lados de la tarjeta */
 
 .flip-card-inner {
@@ -65,12 +68,6 @@
 }
 
 
-/* Estructura específica de la cara frontal */
-
-.flip-card-front {
-    /* Ajusta la imagen al tamaño de la tarjeta para hacerla adaptable*/
-    /* Mascara para oscurecer la imagen y que se pueda ver el titulo */
-}
 
 .flip-card-front img {
     width: 100%;
