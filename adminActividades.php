@@ -116,7 +116,7 @@ if($correo == null || $rolUsuario != "admin"){
                       <div class="flip-card-back"><!-- reverso de la tarjeta -->
                           <div class="row no-gutters">
                               <div class="card-body">
-                               <form action="anyadirActividadAdmin.php" >
+                               <form method="POST" action="anyadirActividadAdmin.php" enctype="multipart/form-data" >
                                    <h5>Nombre</h5>
                                    <input type="text" name="nombreActividad" > 
                                     <h5>Clase</h5>
@@ -128,14 +128,13 @@ if($correo == null || $rolUsuario != "admin"){
                                      <h5>Foto</h5>
                                      <div class="file-input">
 
-        <input type="file" id="file" class="file" name="imagenActividad" ">
+        <input type="file" id="file" class="file" name="imagenActividad">
         <label for="file">Subir</label>
-          
-                               <select name='nombreActividad' style="display:none" > <option value="<?php echo $nombreActividad ?>"></option></select>
-          <select name='imagenActividad' style="display:none"> <option value="<?php echo $imagenActividad ?>"></option> </select>
-          <select name='descripcionActividad' style="display:none"> <option value="<?php echo $descripcionActividad ?>"></option> </select>
-          <select name='claseActividad' style="display:none"> <option value="<?php echo $claseActividad ?>"></option> </select>
-          <select name='subClaseActividad' style="display:none"> <option value="<?php echo $subClaseActividad ?>"></option> </select>
+    </div>
+        <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
+
+        <button type="submit"  style="display:none"></button>
+
           </form>
                               </div>
                           </div>
