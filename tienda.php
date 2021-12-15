@@ -2,9 +2,11 @@
 
 <?php
 session_start();
- include "connection.php";
+include "connection.php";
  include "plantillaHtml.php";
-
+if($correo == null){
+  header("Location: prueba.php");
+}
 
  $sqlCountCarrito="SELECT COUNT(*) as contar, total as total  FROM `carrito` WHERE `idUsuario`='".$_SESSION['correo']."'";
 $consultaSQLcarrito=mysqli_query($con,$sqlCountCarrito) ;

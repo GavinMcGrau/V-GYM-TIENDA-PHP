@@ -1,13 +1,13 @@
 <?php
-
-
 session_start();
 include "connection.php";
-
-
-include "plantillaHtml.php";
+ include "plantillaHtml.php";
+if($correo == null){
+  header("Location: prueba.php");
+}
 
 ?>
+
     <link rel="stylesheet" href="styles/stylesCards.css">
 
   

@@ -1,3 +1,14 @@
+<?php
+session_start();
+include "connection.php";
+ include "plantillaHtml.php";
+if($correo == null){
+  header("Location: prueba.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     
@@ -15,9 +26,8 @@
 </head>
 <?php 
 
-session_start();
-include "connection.php";
- include "plantillaHtml.php";
+
+
  setlocale(LC_TIME,'es-ES');
  $dia=strftime("%A");
  if(strftime("%u")==3){

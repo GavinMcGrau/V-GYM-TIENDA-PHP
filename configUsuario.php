@@ -1,9 +1,11 @@
 <?php
-
 session_start();
 include "connection.php";
-include "plantillaHtml.php";
-$correo = $_SESSION['correo'];
+ include "plantillaHtml.php";
+if($correo == null){
+  header("Location: prueba.php");
+}
+
 
 $sqlGetUserData= "SELECT imagen as foto, nombre as nom, edad as age, peso as pes, altura as alt FROM usuario WHERE correo = '$correo' ";
 $consulta = mysqli_query($con,$sqlGetUserData);
