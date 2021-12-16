@@ -71,15 +71,10 @@ if($correo == null || $rolUsuario != "admin"){
                     <h5>Video</h5>
                     <input type="url" name="descripcionActividad" value="<?php echo $descripcionActividad?>">  
                     <h5>Foto</h5>
-                    <div class="file-input">
-
-        <input type="file" id="file" class="file" name="imagenActividad" ">
-        <label for="file">Subir</label>
-    </div>
-
+                    <input type="url" name="imagenActividad"  value="<?php echo $imagenActividad?>">
 <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
-<button type="submit"  style="display:none"></button>
+<button type="submit" class="botonBio" >Editar</button>
 </form>
                     </div>
                 </div>
@@ -126,11 +121,7 @@ if($correo == null || $rolUsuario != "admin"){
                                      <h5>Video</h5>
                                      <input type="url" name="descripcionActividad" >  
                                      <h5>Foto</h5>
-                                     <div class="file-input">
-
-        <input type="file" id="file" class="file" name="imagenActividad">
-        <label for="file">Subir</label>
-    </div>
+                                     <input type="url" name="imagenActividad" >
         <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
         <button type="submit"  style="display:none"></button>

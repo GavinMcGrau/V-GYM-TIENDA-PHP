@@ -25,3 +25,35 @@
     left: 30% !important;
    
 }
+
+
+.flip-card-front .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0%  !important;
+   overflow:visible !important;
+    border-radius: 0.5rem;
+}
+
+
+input {
+    width: 147px !important;
+    height: 25px !important;
+}
+
+h5{
+    margin-bottom: -1%;
+}
+
+.card-body{
+margin-top: -8vh;
+}
+
+.botonBio{
+    width: 30%;
+    left: 50%;
+    margin-left: 35%;
+}
