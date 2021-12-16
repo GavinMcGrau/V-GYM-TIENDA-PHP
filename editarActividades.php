@@ -26,8 +26,8 @@
   }
   
   
-/*   header('location:adminActividades.php');
-   */
+  header('location:adminActividades.php');
+  
   
   
   

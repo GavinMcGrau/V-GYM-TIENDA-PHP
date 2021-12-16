@@ -62,20 +62,25 @@ if($correo == null || $rolUsuario != "admin"){
                 <div class="row no-gutters">
                     <div class="card-body">
                      <form method="POST" action="editarActividades.php" enctype="multipart/form-data"  >
-                         <h5>Nombre</h5>
+                         <h6>Nombre</h6>
                     <input type="text" name="nombreActividad" value="<?php echo $nombreActividad ?>"> 
-                    <h5>Clase</h5>
+                    <h6>Clase</h6>
                     <input type="text" name="claseActividad" value="<?php echo $claseActividad ?>"> 
-                    <h5>Subclase</h5>
+                    <h6>Subclase</h6>
                     <input type="text" name="subClaseActividad" value="<?php echo $subClaseActividad ?>">
-                    <h5>Video</h5>
+                    <h6>Video</h6>
                     <input type="url" name="descripcionActividad" value="<?php echo $descripcionActividad?>">  
-                    <h5>Foto</h5>
+                    <h6>Foto</h6>
                     <input type="url" name="imagenActividad"  value="<?php echo $imagenActividad?>">
 <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
 <button type="submit" class="botonBio" >Editar</button>
 </form>
+<form method='post' action="dropItemAdmin.php" >
+            <button class="dropActividad" type="submit" value="Submit"></button>
+                  <select name='id' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
+
+  
                     </div>
                 </div>
             </div>
@@ -112,19 +117,19 @@ if($correo == null || $rolUsuario != "admin"){
                           <div class="row no-gutters">
                               <div class="card-body">
                                <form method="POST" action="anyadirActividadAdmin.php" enctype="multipart/form-data" >
-                                   <h5>Nombre</h5>
+                                   <h6>Nombre</h6>
                                    <input type="text" name="nombreActividad" > 
-                                    <h5>Clase</h5>
+                                    <h6>Clase</h6>
                                      <input type="text" name="claseActividad"> 
-                                     <h5>Subclase</h5>
+                                     <h6>Subclase</h6>
                                      <input type="text" name="subClaseActividad" >
-                                     <h5>Video</h5>
+                                     <h6>Video</h6>
                                      <input type="url" name="descripcionActividad" >  
-                                     <h5>Foto</h5>
+                                     <h6>Foto</h6>
                                      <input type="url" name="imagenActividad" >
         <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
-        <button type="submit"  style="display:none"></button>
+        <button type="submit" class="botonBio" >Crear</button>
 
           </form>
                               </div>

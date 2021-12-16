@@ -23,7 +23,8 @@ $subClaseActividad=$_POST['subClaseActividad'];
     $sqlquery=mysqli_query($con,$sqlChangeAvatar);
 
 
-
+    header('location:adminActividades.php');
+  
 
 
 
