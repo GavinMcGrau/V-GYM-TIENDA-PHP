@@ -12,6 +12,8 @@ $correo=$_POST['correo'];
 $_SESSION['correo']=$_POST['correo'];
 $_SESSION['contrasenya']=$_POST['contrasenya'];
 
+password_hash($contrasenya2,PASSWORD_BCRYPT,[10]);
+
 $sql1 = "SELECT COUNT(*) as contar from usuario where correo='$correo' and contrasenya='$contrasenya2' and rol='admin'";
 $consultas1=mysqli_query($con,$sql1);
 $array1 = mysqli_fetch_array($consultas1);
