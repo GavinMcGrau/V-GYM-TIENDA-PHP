@@ -47,31 +47,41 @@ if($correo == null || $rolUsuario != "admin"){
         <div class="flip-card-inner"> 
             <div class="flip-card-front"><!-- frente de la tarjeta -->
                 <div class="mask">
-                    <div class="align-end texto">
+                    <div class="align-end texto" style="font-size:17px; margin-top:75%">
                         
                         <?php echo ucwords($correoUsuario); ?>
+                        <br>
+                        <?php echo ucwords($nombreUsuario); ?>
                     </div>
                 </div>
-                <img src="<?php echo $imagenUsuario;?>" alt="imagen"><!-- Imagen frontal -->
+                <img src="<?php echo $imagenUsuario;?>" alt="imagen" ><!-- Imagen frontal -->
             </div>
             <div class="flip-card-back"><!-- reverso de la tarjeta -->
                 <div class="row no-gutters">
                     <div class="card-body">
                      <form method="POST" action="editarUsuario.php" enctype="multipart/form-data"  >
-                         <h6>Nombre</h6>
-                    <input type="text" name="nombreActividad" value="<?php echo $nombreUsuario ?>"> 
-                    <h6>Correo</h6>
-                    <input type="text" name="claseActividad" value="<?php echo $correoUsuario ?>"> 
-                    <h6>Contrasenya</h6>
-                    <input type="text" name="subClaseActividad" value="<?php echo $contrasenyaUsuario ?>">
-                    <h6>Avatar</h6>
-                    <input type="url" name="descripcionActividad" value="<?php echo $imagenUsuario?>">  
-                    <h6>Peso</h6>
-                    <input type="number" name="imagenActividad"  value="<?php echo $pesoUsuario?>">
-                    <h6>Altura</h6>
-                    <input type="number" name="imagenActividad"  value="<?php echo $alturaUsuario?>">
-                    <h6>Edad</h6>
-                    <input type="number" name="imagenActividad"  value="<?php echo $edadUsuario?>">
+                         <a>Nombre</a>
+                    <input type="text" name="nombreUsuario" value="<?php echo $nombreUsuario ?>"> 
+                    <br>
+                    <a>Correo</a>
+                
+                    <input type="text" name="correoUsuario" value="<?php echo $correoUsuario ?>"> 
+                    <br>
+                    <a>Pass</a>
+                    
+                    <input type="password" name="contrasenyaUsuario" value="<?php echo $contrasenyaUsuario ?>">
+                    <br>
+                    <a>Avatar</a>
+                    <input type="url" name="imagenUsuario" value="<?php echo $imagenUsuario?>">  
+                    <br>
+                    <a>Peso</a>
+                    <input type="number" name="pesoUsuario"  value="<?php echo $pesoUsuario?>">
+                <br>
+                    <a>Altura</a>
+                    <input type="number" name="alturaUsuario"  value="<?php echo $alturaUsuario?>">
+                    <br>
+                    <a>Edad</a>
+                    <input type="number" name="edadUsuario"  value="<?php echo $edadUsuario?>">
 <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
 <button type="submit" class="botonBio" >Editar</button>
@@ -116,17 +126,29 @@ if($correo == null || $rolUsuario != "admin"){
                       <div class="flip-card-back"><!-- reverso de la tarjeta -->
                           <div class="row no-gutters">
                               <div class="card-body">
-                               <form method="POST" action="anyadirActividadAdmin.php" enctype="multipart/form-data" >
-                                   <h6>Nombre</h6>
-                                   <input type="text" name="nombreActividad" > 
-                                    <h6>Clase</h6>
-                                     <input type="text" name="claseActividad"> 
-                                     <h6>Subclase</h6>
-                                     <input type="text" name="subClaseActividad" >
-                                     <h6>Video</h6>
-                                     <input type="url" name="descripcionActividad" >  
-                                     <h6>Foto</h6>
-                                     <input type="url" name="imagenActividad" >
+                               <form method="POST" action="anyadirUsuarioAdmin.php" enctype="multipart/form-data" >
+                                      <a>Nombre</a>
+                    <input type="text" name="nombreUsuario" > 
+                    <br>
+                    <a>Correo</a>
+                
+                    <input type="text" name="contrasenyaUsuario" > 
+                    <br>
+                    <a>Pass</a>
+                    
+                    <input type="text" name="imagenUsuario" ">
+                    <br>
+                    <a>Avatar</a>
+                    <input type="url" name="pesoUsuario" >  
+                    <br>
+                    <a>Peso</a>
+                    <input type="number" name="alturaUsuario" >
+                <br>
+                    <a>Altura</a>
+                    <input type="number" name="edadUsuario"  >
+                    <br>
+                    <a>Edad</a>
+                    <input type="number" name="edadUsuario" >
         <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
 
         <button type="submit" class="botonBio" >Crear</button>

@@ -2,7 +2,7 @@
 
 include "connection.php";
 $usr=$_POST['usr'];
-$contrasenya=$_POST['contrasenya1'];
+$contrasenya=password_hash($_POST['contrasenya1'], PASSWORD_DEFAULT)
 $correo=$_POST['correo'];
 session_start();
 
@@ -15,7 +15,7 @@ if(!$con){
     mysqli_set_charset($con,"utf8");
 }
 
-$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`) VALUES ('".$usr."','".$contrasenya."','".$correo."')";
+$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`,`imagen`) VALUES ('".$usr."','".$contrasenya."','".$correo."','https://www.computerhope.com/jargon/g/guest-user.jpg')";
 $consulta=mysqli_query($con,$sql);
 
 if(!$consulta){

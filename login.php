@@ -7,7 +7,8 @@ setlocale(LC_ALL,"spanish");
 
 
 $correo=$_POST['correo'];
-$contrasenya2=$_POST['contrasenya'];
+/* $contrasenya2=$_POST['contrasenya']; */
+  $contrasenya2=password_hash($_POST['contrasenya'], PASSWORD_DEFAULT);
 $_SESSION['correo']=$_POST['correo'];
 $_SESSION['contrasenya']=$_POST['contrasenya'];
 

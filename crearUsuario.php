@@ -1,8 +1,9 @@
-<?php
 
-echo "<!DOCTYPE html >
+
+<!DOCTYPE html >
 <html class='crearUsuariophp'>
 <head>
+<link rel="shortcut icon" href="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-BE-Logo-Design-by-Greenlines-Studios.jpg">
 <title>PHP</title>
 <link rel='stylesheet' href='styles/styles.css'>
 </head>
@@ -36,4 +37,3 @@ echo "<!DOCTYPE html >
 </html> ";
 
 
-?>
