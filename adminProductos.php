@@ -24,7 +24,7 @@ if($correo == null || $rolUsuario != "admin"){
           $consultaProductos=mysqli_query($con,$sqlImagenActividad);
       
           while (($knowProducto = mysqli_fetch_array($consultaProductos))!=NULL){
-          $nombreProducto = $knowProducto["nombreUsuario"];
+          $nombreProducto = $knowProducto["nombreProducto"];
           $precioProducto = $knowProducto["precioProducto"];
           $imagenProducto = $knowProducto["imagenProducto"];
           $idproducto = $knowProducto["idProducto"];
@@ -43,8 +43,7 @@ if($correo == null || $rolUsuario != "admin"){
                     <div class="align-end texto" style="font-size:17px; margin-top:75%">
                         
                         <?php echo ucwords($nombreProducto); ?>
-                        <br>
-                        <?php echo ucwords($nombreProducto); ?>
+                     
                     </div>
                 </div>
                 <img src="<?php echo $imagenProducto;?>" alt="imagen" >
@@ -56,11 +55,11 @@ if($correo == null || $rolUsuario != "admin"){
                          <a>Nombre</a>
                     <input type="text" name="nombreProducto" value="<?php echo $nombreProducto ?>"> 
                     <br>
-                    <a>Correo</a>
+                    <a>Precio</a>
                 
                     <input type="text" name="precioProducto" value="<?php echo $precioProducto ?>"> 
                     <br>
-                    <a>Pass</a>
+                    <a>Imagen</a>
                     
                     <input type="text" name="imagenProducto" value="<?php echo $imagenProducto ?>">
                     <br>
@@ -99,7 +98,7 @@ if($correo == null || $rolUsuario != "admin"){
                           <div class="mask">
                               <div class="align-end texto">
                                   
-                                  Añadir Actividad
+                                  Añadir Producto
                               </div>
                           </div>
                           <img src="https://i.ibb.co/M2XtVZn/file-add-outline.png" alt="imagen"><!-- Imagen frontal -->
@@ -107,30 +106,20 @@ if($correo == null || $rolUsuario != "admin"){
                       <div class="flip-card-back"><!-- reverso de la tarjeta -->
                           <div class="row no-gutters">
                               <div class="card-body">
-                               <form method="POST" action="anyadirUsuarioAdmin.php" enctype="multipart/form-data" >
+                               <form method="POST" action="anyadirProducto.php" enctype="multipart/form-data" >
                                       <a>Nombre</a>
-                    <input type="text" name="nombreUsuario" > 
+                    <input type="text" name="nombreProducto" > 
                     <br>
-                    <a>Correo</a>
+                    <a>Precio</a>
                 
-                    <input type="text" name="contrasenyaUsuario" > 
+                    <input type="text" name="precioProducto" > 
                     <br>
-                    <a>Pass</a>
+                    <a>Imagen</a>
                     
-                    <input type="text" name="imagenUsuario" ">
+                    <input type="text" name="imagenProducto" ">
                     <br>
-                    <a>Avatar</a>
-                    <input type="url" name="pesoUsuario" >  
-                    <br>
-                    <a>Peso</a>
-                    <input type="number" name="alturaUsuario" >
-                <br>
-                    <a>Altura</a>
-                    <input type="number" name="edadUsuario"  >
-                    <br>
-                    <a>Edad</a>
-                    <input type="number" name="edadUsuario" >
-        <select name='idActividad' style="display:none" > <option value="<?php echo $idActividad ?>"></option></select>
+                    
+        <select name='idProducto' style="display:none" > <option value="<?php echo $idproducto ?>"></option></select>
 
         <button type="submit" class="botonBio" >Crear</button>
 
