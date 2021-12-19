@@ -31,7 +31,7 @@ $consultasUser=mysqli_query($con,$sql3);
 $knowUser = mysqli_fetch_array($consultasUser);
 $nombreUsuario = $knowUser['nombreUsuario'];
 $rolUsuario = $knowUser['rolUsuario'];
-
+$_SESSION['rol']=$rolUsuario;
 
 $sql4 = "SELECT imagen as imagens from usuario where correo='$correo'";
 $consultasFoto=mysqli_query($con,$sql4);

@@ -37,7 +37,7 @@ $knowUser = mysqli_fetch_array($consultasUser);
 $nombreUsuario = $knowUser['nombreUsuario'];
 $rolUsuario = $knowUser['rolUsuario'];
 $fotoUsuario = $knowUser['imagens'];
-
+$_SESSION['rol']=$rolUsuario;
 
 
 ?>

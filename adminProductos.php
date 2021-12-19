@@ -51,7 +51,7 @@ if($correo == null || $rolUsuario != "admin"){
             <div class="flip-card-back"><!-- reverso de la tarjeta -->
                 <div class="row no-gutters">
                     <div class="card-body">
-                     <form method="POST" action="editarProducto.php" enctype="multipart/form-data"  >
+                     <form method="POST" action="editarProductos.php" enctype="multipart/form-data"  >
                          <a>Nombre</a>
                     <input type="text" name="nombreProducto" value="<?php echo $nombreProducto ?>"> 
                     <br>
@@ -61,7 +61,7 @@ if($correo == null || $rolUsuario != "admin"){
                     <br>
                     <a>Imagen</a>
                     
-                    <input type="text" name="imagenProducto" value="<?php echo $imagenProducto ?>">
+                    <input type="url" name="imagenProducto" value="<?php echo $imagenProducto ?>">
                     <br>
                     
 <select name='idProducto' style="display:none" > <option value="<?php echo $idproducto ?>"></option></select>
@@ -70,7 +70,7 @@ if($correo == null || $rolUsuario != "admin"){
 </form>
 <form method='post' action="dropProducto.php" >
             <button class="dropActividad" type="submit" value="Submit"></button>
-                  <select name='id' style="display:none" > <option value="<?php echo $idproducto ?>"></option></select>
+                  <select name='idProducto' style="display:none" > <option value="<?php echo $idproducto ?>"></option></select>
                     </div>
                 </div>
             </div>
