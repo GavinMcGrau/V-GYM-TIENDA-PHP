@@ -2,7 +2,7 @@
 
 include "connection.php";
 $usr=$_POST['usr'];
-$contrasenya=password_hash($_POST['contrasenya1'], PASSWORD_DEFAULT)
+$contrasenya=password_hash($_POST['contrasenya1'], PASSWORD_DEFAULT);
 $correo=$_POST['correo'];
 session_start();
 
