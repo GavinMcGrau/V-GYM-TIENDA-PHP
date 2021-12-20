@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Temps de generació: 14-11-2021 a les 16:22:45
--- Versió del servidor: 10.4.21-MariaDB
--- Versió de PHP: 8.0.12
+-- Tiempo de generación: 15-11-2021 a las 00:04:37
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de dades: `gym`
+-- Base de datos: `gym`
 --
 CREATE DATABASE IF NOT EXISTS `gym` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `gym`;
@@ -26,7 +26,7 @@ USE `gym`;
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `actividades`
+-- Estructura de tabla para la tabla `actividades`
 --
 
 CREATE TABLE `actividades` (
@@ -41,17 +41,24 @@ CREATE TABLE `actividades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Bolcament de dades per a la taula `actividades`
+-- Volcado de datos para la tabla `actividades`
 --
 
 INSERT INTO `actividades` (`id`, `nombre`, `foto`, `clase`, `subclase`, `hecha`, `idUsuario`, `cantidad`) VALUES
 (1, 'flexiones', 'https://i.blogs.es/8f0e76/crossfit/450_1000.jpg', 'Tren Superior', 'Brazos', 0, 'cacscasca@gmal.com', 0),
-(2, 'Crab Walk', 'https://evofitness.at/wp-content/uploads/2020/08/EVO-2020-PP-AUGUST-Banner_17-1200x675.jpg', 'Tren Superior', 'Trapecio - Deltoides - Biceps ', 0, 'cacscasca@gmal.com', 0);
+(2, 'Crab Walk', 'https://evofitness.at/wp-content/uploads/2020/08/EVO-2020-PP-AUGUST-Banner_17-1200x675.jpg', 'Tren Superior', 'Trapecio - Deltoides - Biceps ', 0, 'cacscasca@gmal.com', 0),
+(3, 'Fondos de triceps', 'https://as01.epimg.net/deporteyvida/imagenes/2017/08/06/portada/1502014266_073304_1502014358_noticia_normal.jpg', 'Tren Superior', 'Triceps', 0, '1', 0),
+(4, 'flexiones', 'https://i.blogs.es/8f0e76/crossfit/450_1000.jpg', 'Tren Superior', 'Brazos', 0, '1', 0),
+(5, 'Crab Walk', 'https://evofitness.at/wp-content/uploads/2020/08/EVO-2020-PP-AUGUST-Banner_17-1200x675.jpg', 'Tren Superior', 'Trapecio - Deltoides - Biceps ', 0, '1', 0),
+(6, 'Plancha', 'https://www.yomeentreno.com/wp-content/uploads/2017/05/portada-480x369.png', 'Tren Superior', 'Abdominales', 0, '1', 0),
+(7, 'Sentadilla', 'https://static1.abc.es/media/bienestar/2021/04/08/sentadilla-correcta-kM0E--620x349@abc.jpg', 'Tren Inferior', 'Cuadriceps - Gluteos', 0, '1', 0),
+(8, 'Zancadilla', 'https://css.adelgazarencasa.co/wp-content/uploads/2021/03/Zancada-deslizante-750x563.jpg', 'Tren Inferior', 'Cuadriceps', 0, '1', 0),
+(9, 'Plancha Lateral', 'https://www.operaciontransformer.com/wp-content/uploads/2019/05/WBPR-quoblog-271213_09643.jpg', 'Tren Superior', 'Abdominales Laterales', 0, '1', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -63,40 +70,41 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
--- Bolcament de dades per a la taula `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`nombre`, `contrasenya`, `correo`, `rol`, `imagen`) VALUES
 ('root', 'usbw', 'cacscasca@gmal.com', 'users', 'https://elcultural.com/wp-content/uploads/2020/04/a-9-696x392.jpg'),
-('root', 'usbw', 'lopa@gmail.com', 'users', NULL);
+('root', 'usbw', 'lopa@gmail.com', 'users', NULL),
+('Usuario', '1234', 'usuario@drop.com', 'users', NULL);
 
 --
--- Índexs per a les taules bolcades
+-- Índices para tablas volcadas
 --
 
 --
--- Índexs per a la taula `actividades`
+-- Indices de la tabla `actividades`
 --
 ALTER TABLE `actividades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índexs per a la taula `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`correo`);
 
 --
--- AUTO_INCREMENT per les taules bolcades
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT per la taula `actividades`
+-- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- Base de dades: `phpmyadmin`
+-- Base de datos: `phpmyadmin`
 --
 CREATE DATABASE IF NOT EXISTS `phpmyadmin` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `phpmyadmin`;
@@ -104,7 +112,7 @@ USE `phpmyadmin`;
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__bookmark`
+-- Estructura de tabla para la tabla `pma__bookmark`
 --
 
 CREATE TABLE `pma__bookmark` (
@@ -118,7 +126,7 @@ CREATE TABLE `pma__bookmark` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__central_columns`
+-- Estructura de tabla para la tabla `pma__central_columns`
 --
 
 CREATE TABLE `pma__central_columns` (
@@ -135,7 +143,7 @@ CREATE TABLE `pma__central_columns` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__column_info`
+-- Estructura de tabla para la tabla `pma__column_info`
 --
 
 CREATE TABLE `pma__column_info` (
@@ -154,7 +162,7 @@ CREATE TABLE `pma__column_info` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__designer_settings`
+-- Estructura de tabla para la tabla `pma__designer_settings`
 --
 
 CREATE TABLE `pma__designer_settings` (
@@ -165,7 +173,7 @@ CREATE TABLE `pma__designer_settings` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__export_templates`
+-- Estructura de tabla para la tabla `pma__export_templates`
 --
 
 CREATE TABLE `pma__export_templates` (
@@ -179,7 +187,7 @@ CREATE TABLE `pma__export_templates` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__favorite`
+-- Estructura de tabla para la tabla `pma__favorite`
 --
 
 CREATE TABLE `pma__favorite` (
@@ -190,7 +198,7 @@ CREATE TABLE `pma__favorite` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__history`
+-- Estructura de tabla para la tabla `pma__history`
 --
 
 CREATE TABLE `pma__history` (
@@ -205,7 +213,7 @@ CREATE TABLE `pma__history` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__navigationhiding`
+-- Estructura de tabla para la tabla `pma__navigationhiding`
 --
 
 CREATE TABLE `pma__navigationhiding` (
@@ -219,7 +227,7 @@ CREATE TABLE `pma__navigationhiding` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__pdf_pages`
+-- Estructura de tabla para la tabla `pma__pdf_pages`
 --
 
 CREATE TABLE `pma__pdf_pages` (
@@ -231,7 +239,7 @@ CREATE TABLE `pma__pdf_pages` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__recent`
+-- Estructura de tabla para la tabla `pma__recent`
 --
 
 CREATE TABLE `pma__recent` (
@@ -240,7 +248,7 @@ CREATE TABLE `pma__recent` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Recently accessed tables';
 
 --
--- Bolcament de dades per a la taula `pma__recent`
+-- Volcado de datos para la tabla `pma__recent`
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
@@ -249,7 +257,7 @@ INSERT INTO `pma__recent` (`username`, `tables`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__relation`
+-- Estructura de tabla para la tabla `pma__relation`
 --
 
 CREATE TABLE `pma__relation` (
@@ -264,7 +272,7 @@ CREATE TABLE `pma__relation` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__savedsearches`
+-- Estructura de tabla para la tabla `pma__savedsearches`
 --
 
 CREATE TABLE `pma__savedsearches` (
@@ -278,7 +286,7 @@ CREATE TABLE `pma__savedsearches` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__table_coords`
+-- Estructura de tabla para la tabla `pma__table_coords`
 --
 
 CREATE TABLE `pma__table_coords` (
@@ -292,7 +300,7 @@ CREATE TABLE `pma__table_coords` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__table_info`
+-- Estructura de tabla para la tabla `pma__table_info`
 --
 
 CREATE TABLE `pma__table_info` (
@@ -304,7 +312,7 @@ CREATE TABLE `pma__table_info` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__table_uiprefs`
+-- Estructura de tabla para la tabla `pma__table_uiprefs`
 --
 
 CREATE TABLE `pma__table_uiprefs` (
@@ -318,7 +326,7 @@ CREATE TABLE `pma__table_uiprefs` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__tracking`
+-- Estructura de tabla para la tabla `pma__tracking`
 --
 
 CREATE TABLE `pma__tracking` (
@@ -337,7 +345,7 @@ CREATE TABLE `pma__tracking` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__userconfig`
+-- Estructura de tabla para la tabla `pma__userconfig`
 --
 
 CREATE TABLE `pma__userconfig` (
@@ -347,16 +355,16 @@ CREATE TABLE `pma__userconfig` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='User preferences storage for phpMyAdmin';
 
 --
--- Bolcament de dades per a la taula `pma__userconfig`
+-- Volcado de datos para la tabla `pma__userconfig`
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2021-11-14 15:20:24', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"ca\"}');
+('root', '2021-11-14 21:37:28', '{\"Console\\/Mode\":\"collapse\",\"lang\":\"es\"}');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__usergroups`
+-- Estructura de tabla para la tabla `pma__usergroups`
 --
 
 CREATE TABLE `pma__usergroups` (
@@ -368,7 +376,7 @@ CREATE TABLE `pma__usergroups` (
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pma__users`
+-- Estructura de tabla para la tabla `pma__users`
 --
 
 CREATE TABLE `pma__users` (
@@ -377,170 +385,170 @@ CREATE TABLE `pma__users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Users and their assignments to user groups';
 
 --
--- Índexs per a les taules bolcades
+-- Índices para tablas volcadas
 --
 
 --
--- Índexs per a la taula `pma__bookmark`
+-- Indices de la tabla `pma__bookmark`
 --
 ALTER TABLE `pma__bookmark`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índexs per a la taula `pma__central_columns`
+-- Indices de la tabla `pma__central_columns`
 --
 ALTER TABLE `pma__central_columns`
   ADD PRIMARY KEY (`db_name`,`col_name`);
 
 --
--- Índexs per a la taula `pma__column_info`
+-- Indices de la tabla `pma__column_info`
 --
 ALTER TABLE `pma__column_info`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `db_name` (`db_name`,`table_name`,`column_name`);
 
 --
--- Índexs per a la taula `pma__designer_settings`
+-- Indices de la tabla `pma__designer_settings`
 --
 ALTER TABLE `pma__designer_settings`
   ADD PRIMARY KEY (`username`);
 
 --
--- Índexs per a la taula `pma__export_templates`
+-- Indices de la tabla `pma__export_templates`
 --
 ALTER TABLE `pma__export_templates`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `u_user_type_template` (`username`,`export_type`,`template_name`);
 
 --
--- Índexs per a la taula `pma__favorite`
+-- Indices de la tabla `pma__favorite`
 --
 ALTER TABLE `pma__favorite`
   ADD PRIMARY KEY (`username`);
 
 --
--- Índexs per a la taula `pma__history`
+-- Indices de la tabla `pma__history`
 --
 ALTER TABLE `pma__history`
   ADD PRIMARY KEY (`id`),
   ADD KEY `username` (`username`,`db`,`table`,`timevalue`);
 
 --
--- Índexs per a la taula `pma__navigationhiding`
+-- Indices de la tabla `pma__navigationhiding`
 --
 ALTER TABLE `pma__navigationhiding`
   ADD PRIMARY KEY (`username`,`item_name`,`item_type`,`db_name`,`table_name`);
 
 --
--- Índexs per a la taula `pma__pdf_pages`
+-- Indices de la tabla `pma__pdf_pages`
 --
 ALTER TABLE `pma__pdf_pages`
   ADD PRIMARY KEY (`page_nr`),
   ADD KEY `db_name` (`db_name`);
 
 --
--- Índexs per a la taula `pma__recent`
+-- Indices de la tabla `pma__recent`
 --
 ALTER TABLE `pma__recent`
   ADD PRIMARY KEY (`username`);
 
 --
--- Índexs per a la taula `pma__relation`
+-- Indices de la tabla `pma__relation`
 --
 ALTER TABLE `pma__relation`
   ADD PRIMARY KEY (`master_db`,`master_table`,`master_field`),
   ADD KEY `foreign_field` (`foreign_db`,`foreign_table`);
 
 --
--- Índexs per a la taula `pma__savedsearches`
+-- Indices de la tabla `pma__savedsearches`
 --
 ALTER TABLE `pma__savedsearches`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `u_savedsearches_username_dbname` (`username`,`db_name`,`search_name`);
 
 --
--- Índexs per a la taula `pma__table_coords`
+-- Indices de la tabla `pma__table_coords`
 --
 ALTER TABLE `pma__table_coords`
   ADD PRIMARY KEY (`db_name`,`table_name`,`pdf_page_number`);
 
 --
--- Índexs per a la taula `pma__table_info`
+-- Indices de la tabla `pma__table_info`
 --
 ALTER TABLE `pma__table_info`
   ADD PRIMARY KEY (`db_name`,`table_name`);
 
 --
--- Índexs per a la taula `pma__table_uiprefs`
+-- Indices de la tabla `pma__table_uiprefs`
 --
 ALTER TABLE `pma__table_uiprefs`
   ADD PRIMARY KEY (`username`,`db_name`,`table_name`);
 
 --
--- Índexs per a la taula `pma__tracking`
+-- Indices de la tabla `pma__tracking`
 --
 ALTER TABLE `pma__tracking`
   ADD PRIMARY KEY (`db_name`,`table_name`,`version`);
 
 --
--- Índexs per a la taula `pma__userconfig`
+-- Indices de la tabla `pma__userconfig`
 --
 ALTER TABLE `pma__userconfig`
   ADD PRIMARY KEY (`username`);
 
 --
--- Índexs per a la taula `pma__usergroups`
+-- Indices de la tabla `pma__usergroups`
 --
 ALTER TABLE `pma__usergroups`
   ADD PRIMARY KEY (`usergroup`,`tab`,`allowed`);
 
 --
--- Índexs per a la taula `pma__users`
+-- Indices de la tabla `pma__users`
 --
 ALTER TABLE `pma__users`
   ADD PRIMARY KEY (`username`,`usergroup`);
 
 --
--- AUTO_INCREMENT per les taules bolcades
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT per la taula `pma__bookmark`
+-- AUTO_INCREMENT de la tabla `pma__bookmark`
 --
 ALTER TABLE `pma__bookmark`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `pma__column_info`
+-- AUTO_INCREMENT de la tabla `pma__column_info`
 --
 ALTER TABLE `pma__column_info`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `pma__export_templates`
+-- AUTO_INCREMENT de la tabla `pma__export_templates`
 --
 ALTER TABLE `pma__export_templates`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `pma__history`
+-- AUTO_INCREMENT de la tabla `pma__history`
 --
 ALTER TABLE `pma__history`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `pma__pdf_pages`
+-- AUTO_INCREMENT de la tabla `pma__pdf_pages`
 --
 ALTER TABLE `pma__pdf_pages`
   MODIFY `page_nr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT per la taula `pma__savedsearches`
+-- AUTO_INCREMENT de la tabla `pma__savedsearches`
 --
 ALTER TABLE `pma__savedsearches`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- Base de dades: `test`
+-- Base de datos: `test`
 --
 CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `test`;

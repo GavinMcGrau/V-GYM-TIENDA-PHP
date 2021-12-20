@@ -7,46 +7,23 @@ setlocale(LC_ALL,"spanish");
 
 
 $correo=$_POST['correo'];
-/* $contrasenya2=$_POST['contrasenya']; */
-  $contrasenya2=$_POST['contrasenya'] ;
+$contrasenya2=$_POST['contrasenya'];
 $_SESSION['correo']=$_POST['correo'];
 $_SESSION['contrasenya']=$_POST['contrasenya'];
 
-password_hash($contrasenya2,PASSWORD_BCRYPT,[10]);
-
-
-$sql1 = "SELECT COUNT(*) as contar,contrasenya as contra from usuario where correo='$correo' and rol='admin'";
-$consultas1=mysqli_query($con,$sql1);
-$array1 = mysqli_fetch_array($consultas1);
-
- $sql2 = "SELECT COUNT(*) as contarUser, contrasenya as contra from usuario where correo='$correo'";
+$sql2 = "SELECT COUNT(*) as contar from usuario where correo='$correo' and contrasenya='$contrasenya2'";
 $consultas=mysqli_query($con,$sql2);
 $array = mysqli_fetch_array($consultas);
 
-if($array1 ['contar']>0 ){
-  if(password_verify($contrasenya2, $array1['contra'])){
-
-  header('Location: paginaAdmin.php');
-
-
-  }else{
-      header("Location: logout.php");
-  }
-
-
-
-}elseif ($array ['contarUser']>0 ){
-   
- if(password_verify($contrasenya2, $array['contra'])){
-
+if($array ['contar']>0 ){
   header('Location: paginaUsuario.php');
+  ?>
 
-  }else{
-      header("Location: logout.php");
-  }
-  
+   
 
+//Operaciones a realizar
 
+}
          
                    ?> 
 

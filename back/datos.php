@@ -2,7 +2,7 @@
 
 include "connection.php";
 $usr=$_POST['usr'];
-$contrasenya=password_hash($_POST['contrasenya1'], PASSWORD_DEFAULT);
+$contrasenya=$_POST['contrasenya1'];
 $correo=$_POST['correo'];
 session_start();
 
@@ -15,12 +15,10 @@ if(!$con){
     mysqli_set_charset($con,"utf8");
 }
 
-$comprovarCorreo="SELECT COUNT(*) as contar, correo FROM usuario where correo = '$correo'";
-$saberComprovar=mysqli_query($con,$comprovarCorreo);
-$obtenerComprovar = mysqli_fetch_array($saberComprovar);
+$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`) VALUES ('".$usr."','".$contrasenya."','".$correo."')";
+$consulta=mysqli_query($con,$sql);
 
-
-if($obtenerComprovar['contar']> 0){
+if(!$consulta){
 
     ?>
     <!DOCTYPE html>
@@ -63,11 +61,8 @@ if($obtenerComprovar['contar']> 0){
 <?php
  
 }else{
-    
-$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`,`imagen`) VALUES ('".$usr."','".$contrasenya."','".$correo."','https://www.computerhope.com/jargon/g/guest-user.jpg')";
-$consulta=mysqli_query($con,$sql);
 	
-    header('Location: index.php');
+    header('Location: index.html');
 }
 
 ?>

@@ -1,57 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Usbwebserver</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <link rel="shortcut icon" href="https://www.creativefabrica.com/wp-content/uploads/2019/02/Monogram-BE-Logo-Design-by-Greenlines-Studios.jpg">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
 </head>
+<?php 
+
+session_start();
+
+if($_SESSION != NULL){
+header('location:paginaUsuario.php');
+}
+
+?>
+
+
+
 <body>
-	<div id="container">
-		<img id="header" src="images/header.png">
-		<ul id="menu">
-			<li>
-				<div id="menuleft"></div>
-				<a id="menua" href="http://www.usbwebserver.com">
-					USBWebserver.com
-				</a>
-				<div id="menuright"></div>
-			</li>
-			<li>
-				<div id="menuleft"></div>
-				<a id="menua" href="http://www.border-it.nl">
-					Border-IT
-				</a>
-				<div id="menuright"></div>
-			</li>
-		</ul>
-		<div id="topcontent"></div>
-		<div id="content">
-			<div id="contentleft">
 
-			<h1>USBWebserver V8.6</h1>
-			<p>
-				<ul>
-					<li>14 different languages</li>
-					<li>DPI bug fixed</li>
-					<li>Php 5.4.17</li>
-					<li>Httpd 2.4.6</li>
-					<li>PhpMyAdmin 4.0.4.2</li>
-					<li>MySQL 5.6.13</li>
-				</ul>
-			</p>
-			<h1>PHP 5.4.17 info</h1>
-			<?php
-				ob_start();
-				phpinfo();
-				$i = ob_get_contents();
-				ob_end_clean();
-				
-				echo ( str_replace ( "module_Zend Optimizer", "module_Zend_Optimizer", preg_replace ( '%^.*<body>(.*)</body>.*$%ms', '$1', $i ) ) ) ;
+    <a class="nombreFit" id="nombre">BreakEnds</a>
 
-			?>
-			
-			</div>
-			<a href="#" id="banner"></a>
-			<br style="clear:both">
-		
+    <div class="content">
+
+        <a href="prueba.php" class="loginPage">
+            <h3 class="loginPageText">Log In</h3>
+        </a>
+
+        <!-- background https://www.youtube.com/watch?v=4-zjQvTDnbw    https://es.savefrom.net/1-youtube-video-downloader-15.html-->
+
+
+        <video autoplay muted loop id="backVideo">
+    <source src="/src/videoplayback (1) (1).mp4 " type="video/mp4">
+  </video>
+        <a class=" crearPage " href="crearUsuario.php">
+            <h3 class="crearPageText">Sing Up</h3>
+        </a>
+
+
+    </div>
+
+</body>
+
+</html>
