@@ -15,10 +15,12 @@ if(!$con){
     mysqli_set_charset($con,"utf8");
 }
 
-$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`,`imagen`) VALUES ('".$usr."','".$contrasenya."','".$correo."','https://www.computerhope.com/jargon/g/guest-user.jpg')";
-$consulta=mysqli_query($con,$sql);
+$comprovarCorreo="SELECT COUNT(*) as contar, correo FROM usuario where correo = '$correo'";
+$saberComprovar=mysqli_query($con,$comprovarCorreo);
+$obtenerComprovar = mysqli_fetch_array($saberComprovar);
 
-if(!$consulta){
+
+if($obtenerComprovar['contar']> 0){
 
     ?>
     <!DOCTYPE html>
@@ -61,6 +63,9 @@ if(!$consulta){
 <?php
  
 }else{
+    
+$sql ="INSERT INTO `usuario`(`nombre`,`contrasenya`,`correo`,`imagen`) VALUES ('".$usr."','".$contrasenya."','".$correo."','https://www.computerhope.com/jargon/g/guest-user.jpg')";
+$consulta=mysqli_query($con,$sql);
 	
     header('Location: index.php');
 }

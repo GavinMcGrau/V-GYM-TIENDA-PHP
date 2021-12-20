@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+include "plantillaHtmlAdmin.php";
+  if($correo == null ){
+      header("Location: paginaUsuario.php");
+    }
 include "connection.php";
 include "plantillaHtml.php";
 $correo = $_SESSION['correo'];
