@@ -29,7 +29,6 @@ $correo=$_SESSION['correo'];
 $contrasenya= $_SESSION['contrasenya'];
 
 
-/* $sql2 = "SELECT nombre,contrasenya from usuario where nombre='".$usr."' && contrasenya='".$contrasenya2."'";*/
 
 $sql3 = "SELECT nombre as nombreUsuario,rol as rolUsuario,imagen as imagens from usuario where correo='$correo'";
 $consultasUser=mysqli_query($con,$sql3);
@@ -44,7 +43,7 @@ $_SESSION['rol']=$rolUsuario;
 <body class="bodyUserPage ">
 
     <div class=" barraPlantilla d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark position-fixed" style="width: 250px;">
-        <a href="/" class=" d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="100"> </svg>
+        <a href="paginaAdmin.php" class=" d-flex align-items-center mb-5 mb-md-5 me-md-auto text-white text-decoration-none"> <svg class="bi me-2" width="40" height="100"> </svg>
             <h2 class="fs-4 ">BreakEnds</h2>
            
         </a>
